@@ -71,7 +71,7 @@ export default function HowItWorks({ onOpenConfigurator }: { onOpenConfigurator:
             </p>
             <button 
               onClick={onOpenConfigurator}
-              className="bg-[#C4EB00] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl relative z-10"
+              className="bg-[#FF9EDE] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl relative z-10"
             >
               Empezar configuración
             </button>

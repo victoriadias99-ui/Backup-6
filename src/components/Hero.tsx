@@ -25,8 +25,8 @@ export default function Hero() {
       textColor: "text-black",
       title: "Cada empaque\ncuenta una\nhistoria.",
       description: "La solución perfecta para alimentos, cosméticos y más. Totalmente personalizables y con barreras de alta protección.",
-      buttonText: "CONFIGURAR AHORA",
-      buttonBg: "bg-[#FF9EDE]",
+      buttonText: "COTIZAR AHORA",
+      buttonBg: "bg-black",
       link: "/bolsas-doypack",
       image: "/pack.png",
       badges: []
@@ -90,10 +90,16 @@ export default function Hero() {
               <div className="md:w-[40%] flex items-center justify-center p-6 md:p-10 z-10">
                 <div className="max-w-md">
                   <h1
-  className={`text-3xl md:text-4xl font-bold ${slide.textColor} leading-tight whitespace-pre-line`}
->
-  {slide.title}
-</h1>
+                    className={`text-3xl md:text-4xl font-bold ${slide.textColor} leading-tight whitespace-pre-line mb-8`}
+                  >
+                    {slide.title}
+                  </h1>
+                  <Link 
+                    to={slide.link}
+                    className={`${slide.buttonBg || 'bg-black'} ${slide.textColor === 'text-black' ? 'text-white' : 'text-black'} px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-all inline-block uppercase tracking-wider`}
+                  >
+                    {slide.buttonText}
+                  </Link>
                 </div>
               </div>
               

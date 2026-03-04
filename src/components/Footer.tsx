@@ -1,67 +1,107 @@
+import { useState, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Box, Check } from 'lucide-react';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      // Simulate API call
+      console.log('Newsletter subscription:', email);
+      setSubscribed(true);
+      setEmail('');
+      setTimeout(() => setSubscribed(false), 5000);
+    }
+  };
+
   return (
-    <footer className="bg-[#FDEDD4] text-black pt-8 pb-6 relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-8 max-w-lg">
-          <h3 className="text-lg font-bold mb-4">Suscríbete al boletín</h3>
-          <form className="space-y-3">
-            <div>
-              <label className="block text-xs mb-1 font-bold">Correo*</label>
-              <input type="email" className="w-full p-1.5 rounded border border-black/20 text-gray-900 text-sm" />
+    <footer className="bg-[#7F35F1] text-white pt-16 pb-8 relative border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          {/* Logo & Brand */}
+          <div className="md:col-span-3">
+            <Link to="/" className="flex items-center mb-6 group">
+  <img 
+    src="/copia-logo.png" 
+    alt="Forprini logo" 
+    className="w-56 h-20 object-contain" 
+  />
+</Link>
+            <div className="flex gap-4">
+              <a href="#" className="text-white/40 hover:text-white transition-colors"><Facebook size={20} /></a>
+              <a href="#" className="text-white/40 hover:text-white transition-colors"><Instagram size={20} /></a>
+              <a href="#" className="text-white/40 hover:text-white transition-colors"><Linkedin size={20} /></a>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs mb-1 font-bold">Nombre *</label>
-                <input type="text" className="w-full p-1.5 rounded border border-black/20 text-gray-900 text-sm" />
-              </div>
-              <div>
-                <label className="block text-xs mb-1 font-bold">Apellido</label>
-                <input type="text" className="w-full p-1.5 rounded border border-black/20 text-gray-900 text-sm" />
-              </div>
+          </div>
+
+          {/* Useful Links Column 1 */}
+          <div className="md:col-span-2">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Enlaces útiles</h4>
+            <ul className="space-y-4">
+              <li><Link to="/" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Inicio</Link></li>
+              <li><Link to="/#productos" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Productos</Link></li>
+              <li><Link to="/nosotros" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
+              <li><Link to="/como-funciona" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Cómo funciona</Link></li>
+            </ul>
+          </div>
+
+          {/* Useful Links Column 2 */}
+          <div className="md:col-span-2">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Productos</h4>
+            <ul className="space-y-4">
+              <li><Link to="/bolsas-doypack" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Doypack</Link></li>
+              <li><Link to="/bolsas-planas" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Planas</Link></li>
+              <li><Link to="/envases-cosmeticos" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Envases Cosméticos</Link></li>
+              <li><Link to="/contacto" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Contacto</Link></li>
+            </ul>
+          </div>
+
+          {/* Newsletter Section */}
+          <div className="md:col-span-5">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Suscríbete a nuestro boletín</h4>
+            <div className="relative max-w-md">
+              {subscribed ? (
+                <div className="flex items-center gap-3 bg-white/10 rounded-full p-3 px-6 border border-white/10 animate-in fade-in zoom-in duration-300">
+                  <div className="w-8 h-8 bg-[#C4EB00] rounded-full flex items-center justify-center text-black">
+                    <Check size={18} />
+                  </div>
+                  <span className="text-sm font-bold">¡Gracias por suscribirte!</span>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex bg-white/10 rounded-full p-1.5 pl-6 items-center border border-white/10 focus-within:border-white/20 transition-all">
+                  <input 
+                    type="email" 
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Tu dirección de correo" 
+                    className="bg-transparent border-none outline-none flex-grow text-sm placeholder:text-white/30 py-2" 
+                  />
+                  <button type="submit" className="bg-[#C4EB00] text-black px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-[#C4EB00]/20">
+                    Enviar
+                  </button>
+                </form>
+              )}
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs mb-1 font-bold">Nombre de la empresa</label>
-                <input type="text" className="w-full p-1.5 rounded border border-black/20 text-gray-900 text-sm" />
-              </div>
-              <div>
-                <label className="block text-xs mb-1 font-bold">Ámbito laboral</label>
-                <select className="w-full p-1.5 rounded border border-black/20 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C4EB00]">
-                  <option>Selecciona</option>
-                  <option>Alimentación</option>
-                  <option>Café</option>
-                  <option>Cosmética</option>
-                  <option>Suplementos</option>
-                  <option>Otros</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex items-start gap-2 mt-2">
-              <input type="checkbox" className="mt-1" />
-              <label className="text-[10px] leading-tight font-medium">
-                He leído la <a href="#" className="underline">Política de Privacidad</a> y consiento el tratamiento de mis datos.*
-              </label>
-            </div>
-            <div className="flex items-center gap-4 mt-3">
-              <div className="bg-white text-blue-600 p-1.5 rounded text-[10px] flex items-center gap-2 w-40 h-10 border border-black/10">
-                <span className="font-bold leading-none">protección de reCAPTCHA</span>
-                <div className="ml-auto w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">↻</div>
-              </div>
-              <button type="submit" className="bg-[#C4EB00] text-black px-6 py-2 rounded font-bold text-sm hover:bg-[#A5C600] transition-colors">
-                Enviar
-              </button>
-            </div>
-          </form>
+            <p className="mt-4 text-[10px] text-white/40 font-medium max-w-xs">
+              Al suscribirte, aceptas nuestra Política de Privacidad y recibir comunicaciones de marketing.
+            </p>
+          </div>
         </div>
 
-        <div className="flex justify-end items-center gap-4 mb-8">
-          <span className="text-sm font-bold">SÍGANOS</span>
-          <a href="#" className="w-8 h-8 bg-black/10 rounded flex items-center justify-center hover:bg-black hover:text-white transition-colors"><Facebook size={18} /></a>
-          <a href="#" className="w-8 h-8 bg-black/10 rounded flex items-center justify-center hover:bg-black hover:text-white transition-colors"><Instagram size={18} /></a>
-          <a href="#" className="w-8 h-8 bg-black/10 rounded flex items-center justify-center hover:bg-black hover:text-white transition-colors"><Linkedin size={18} /></a>
+        {/* Bottom Section */}
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs font-bold text-white/40 uppercase tracking-widest">
+            Copyright © {currentYear} Forprini Packaging
+          </p>
+          <p className="text-xs font-bold text-white/40 uppercase tracking-widest">
+            Todos los derechos reservados.
+          </p>
         </div>
       </div>
       

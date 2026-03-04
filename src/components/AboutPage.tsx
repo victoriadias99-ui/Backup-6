@@ -115,7 +115,7 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
               </div>
               <button 
                 onClick={onOpenConfigurator}
-                className="bg-[#C4EB00] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl"
+                className="bg-[#FF9EDE] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl"
               >
                 Empezar ahora
               </button>

@@ -51,9 +51,9 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={onOpenConfigurator}
-                className="flex-1 bg-[#FF9EDE] text-black px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all transform hover:scale-105"
+                className="flex-1 bg-[#C4EB00] text-black px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all transform hover:scale-105"
               >
-                CONFIGURAR AHORA <ShoppingCart size={20} />
+                COTIZAR AHORA <ShoppingCart size={20} />
               </button>
             </div>
           </div>

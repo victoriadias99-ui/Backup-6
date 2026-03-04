@@ -32,7 +32,7 @@ export default function InfoPage({ title, description, onOpenConfigurator, image
             </p>
             <button 
               onClick={onOpenConfigurator}
-              className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-all transform hover:scale-105"
+              className="bg-[#FF9EDE] text-black px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all transform hover:scale-105"
             >
               SOLICITAR INFORMACIÓN
             </button>
