@@ -13,8 +13,6 @@ export default function Hero() {
       textColor: "text-black",
       title: "El primer impacto\nempieza en el\nempaque.",
       description: "Vestibulum ipsum augue, tincidunt ut arcu id, venenatis efficitur leo.",
-      buttonText: "VER CATÁLOGO",
-      link: "/bolsas-doypack",
       image: "/mezclado.png",
       badges: []
     },
@@ -25,9 +23,6 @@ export default function Hero() {
       textColor: "text-black",
       title: "Cada empaque\ncuenta una\nhistoria.",
       description: "La solución perfecta para alimentos, cosméticos y más. Totalmente personalizables y con barreras de alta protección.",
-      buttonText: "COTIZAR AHORA",
-      buttonBg: "bg-black",
-      link: "/bolsas-doypack",
       image: "/pack.png",
       badges: []
     },
@@ -38,8 +33,6 @@ export default function Hero() {
       textColor: "text-white",
       title: "Envases de\nvidrio y\nfrascos\nelegantes",
       description: "Dale a tu producto un toque de distinción con nuestros frascos de vidrio. Ideales para cosmética y productos gourmet.",
-      buttonText: "SABER MÁS",
-      link: "/bolsas-planas",
       image: "/plana-1.png",
       badges: []
     }
@@ -94,12 +87,6 @@ export default function Hero() {
                   >
                     {slide.title}
                   </h1>
-                  <Link 
-                    to={slide.link}
-                    className={`${slide.buttonBg || 'bg-black'} ${slide.textColor === 'text-black' ? 'text-white' : 'text-black'} px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-all inline-block uppercase tracking-wider`}
-                  >
-                    {slide.buttonText}
-                  </Link>
                 </div>
               </div>
               
