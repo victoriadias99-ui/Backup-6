@@ -67,8 +67,8 @@ export default function Finishes() {
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={32}
-          slidesPerView={1.1}
+          spaceBetween={20}
+          slidesPerView={1}
           slidesPerGroup={1}
           loop={true}
           navigation={{
@@ -82,7 +82,8 @@ export default function Finishes() {
           breakpoints={{
             640: { 
               slidesPerView: 1,
-              slidesPerGroup: 1
+              slidesPerGroup: 1,
+              spaceBetween: 32
             },
             768: { 
               slidesPerView: 2,
@@ -95,10 +96,10 @@ export default function Finishes() {
               spaceBetween: 40
             }
           }}
-          className="pb-24 !px-4 !overflow-visible"
+          className="pb-24 !px-4"
         >
           {items.map((item, i) => (
-            <SwiperSlide key={i} className="!h-auto">
+            <SwiperSlide key={i} className="h-full">
               <div className="bg-white rounded-[2rem] p-5 md:p-6 h-full flex flex-col lg:flex-row items-center lg:items-stretch gap-10 border border-gray-100 hover:border-[#7F35F1]/20 transition-all duration-700 group/card shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(127,53,241,0.1)] hover:-translate-y-2 relative overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#7F35F1]/5 rounded-full blur-3xl group-hover/card:bg-[#7F35F1]/10 transition-colors duration-700"></div>

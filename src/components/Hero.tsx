@@ -54,7 +54,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[70vh] min-h-[450px] -mt-20 overflow-hidden bg-white">
+    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 overflow-hidden bg-white">
       {/* Navigation Buttons */}
       <button 
         onClick={prevSlide}
@@ -74,16 +74,16 @@ export default function Hero() {
         {slides.map((slide, index) => (
           <div 
             key={slide.id}
-            className={`absolute inset-0 ${slide.bgColor} ${
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${slide.bgColor} ${
               currentSlide === index ? 'opacity-100 z-20' : 'opacity-0 z-10'
             }`}
           >
             <div className="w-full h-full flex flex-col md:flex-row items-stretch">
               {/* Left Side: Text Content */}
-              <div className="md:w-[40%] flex items-center justify-center p-6 md:p-10 z-10">
-                <div className="max-w-md">
+              <div className="h-[40%] md:h-auto md:w-[40%] flex items-center justify-center p-6 pt-24 md:pt-10 md:p-10 z-10">
+                <div className="max-w-md text-center md:text-left">
                   <h1
-                    className={`text-3xl md:text-4xl font-bold ${slide.textColor} leading-tight whitespace-pre-line mb-8`}
+                    className={`text-2xl sm:text-3xl md:text-4xl font-bold ${slide.textColor} leading-tight whitespace-pre-line mb-4 md:mb-8`}
                   >
                     {slide.title}
                   </h1>
@@ -91,7 +91,7 @@ export default function Hero() {
               </div>
               
               {/* Right Side: Image */}
-              <div className="md:w-[60%] relative overflow-hidden">
+              <div className="flex-1 md:w-[60%] relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/5 z-10" />
                 <img 
                   src={slide.image} 

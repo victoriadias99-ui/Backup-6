@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import ConfiguratorModal from './components/ConfiguratorModal';
 import DoypackPage from './components/DoypackPage';
 import FlatBagPage from './components/FlatBagPage';
+import MaterialDetailPage from './components/MaterialDetailPage';
 import InfoPage from './components/InfoPage';
 import HowItWorks from './components/HowItWorks';
 import ScrollToTop from './components/ScrollToTop';
@@ -89,6 +90,10 @@ function AppContent({
           <Route 
             path="/como-funciona" 
             element={<HowItWorks onOpenConfigurator={onOpenConfigurator} />} 
+          />
+          <Route 
+            path="/materiales/:materialId" 
+            element={<MaterialDetailPage onOpenConfigurator={onOpenConfigurator} />} 
           />
           {/* Catch-all route to prevent blank pages */}
           <Route path="*" element={<HomePage onOpenConfigurator={onOpenConfigurator} />} />

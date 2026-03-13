@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ShieldCheck, Droplet, Sun, Feather } from 'lucide-react';
 
 export default function Materials() {
@@ -6,6 +7,7 @@ export default function Materials() {
 
   const materialsData = [
     {
+      id: "aluminio",
       name: "ALUMINIO",
       title: "Aluminio",
       image: "/Aluminio.png",
@@ -19,6 +21,7 @@ export default function Materials() {
       symbol: "AL"
     },
     {
+      id: "papel-aluminio",
       name: "PAPEL DE ALUMINIO",
       title: "Papel de Aluminio",
       image: "/Papel-aluminio.png",
@@ -31,6 +34,7 @@ export default function Materials() {
       symbol: "PAP/AL"
     },
     {
+      id: "papel-reciclable",
       name: "PAPEL RECICLABLE",
       title: "Papel Reciclable",
       image: "/reciclable.png",
@@ -43,6 +47,7 @@ export default function Materials() {
       symbol: "PAP"
     },
     {
+      id: "pelicula-metalizada",
       name: "PELÍCULA RECICLABLE METALIZADA",
       title: "Película Reciclable Metalizada",
       image: "/metalizada.png",
@@ -55,6 +60,7 @@ export default function Materials() {
       symbol: "PP/MET"
     },
     {
+      id: "pelicula-transparente",
       name: "PELÍCULA RECICLABLE TRANSPARENTE",
       title: "Película Reciclable Transparente",
       image: "/transparente.png",
@@ -121,7 +127,7 @@ export default function Materials() {
 
           <div className="md:w-1/2 flex justify-center relative animate-in fade-in slide-in-from-left-8 duration-500" key={`img-${activeTab}`}>
             <div className="absolute inset-0 bg-gray-100 rounded-full transform -translate-x-1/4 scale-125 blur-3xl"></div>
-            <img src={currentMaterial.image} alt={currentMaterial.title} className="relative z-10 drop-shadow-2xl h-[420px] object-contain" referrerPolicy="no-referrer" />
+            <img src={currentMaterial.image} alt={currentMaterial.title} className="relative z-10 drop-shadow-2xl h-auto max-h-[300px] md:max-h-[420px] object-contain" referrerPolicy="no-referrer" />
           </div>
           
           <div className="md:w-1/2 max-w-md animate-in fade-in slide-in-from-right-8 duration-500" key={`content-${activeTab}`}>
@@ -141,9 +147,9 @@ export default function Materials() {
                 <span className="text-xs font-bold">{currentMaterial.symbol}</span>
               </div>
             </div>
-            <button className="border border-[#C4EB00] text-black px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-[#C4EB00] transition-colors">
+            <Link to={`/materiales/${currentMaterial.id}`} className="inline-flex items-center gap-2 border border-[#C4EB00] text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-[#C4EB00] transition-colors">
               MÁS INFORMACIÓN <div className="w-4 h-4 border border-current rounded-full flex items-center justify-center text-[10px]">+</div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
