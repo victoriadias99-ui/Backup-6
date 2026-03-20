@@ -78,32 +78,14 @@ export default function Hero() {
               currentSlide === index ? 'opacity-100 z-20' : 'opacity-0 z-10'
             }`}
           >
-            <div className="w-full h-full flex flex-col md:flex-row items-stretch">
-              {/* Left Side: Text Content */}
-              <div className="h-[40%] md:h-auto md:w-[40%] flex items-center justify-center p-6 pt-24 md:pt-10 md:p-10 z-10">
-                <div className="max-w-md text-center md:text-left">
-                  <h1
-                    className={`text-2xl sm:text-3xl md:text-4xl font-bold ${slide.textColor} leading-tight whitespace-pre-line mb-4 md:mb-8`}
-                  >
-                    {slide.title}
-                  </h1>
-                </div>
-              </div>
-              
-              {/* Right Side: Image */}
-              <div className="flex-1 md:w-[60%] relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/5 z-10" />
-                <img 
-                  src={slide.image} 
-                  alt={slide.title} 
-                  className="w-full h-full object-cover" 
-                  referrerPolicy="no-referrer" 
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+           <div className="w-full h-full relative">
+  <img 
+    src={slide.image} 
+    alt={slide.title} 
+    className="w-full h-full object-cover" 
+    referrerPolicy="no-referrer" 
+  />
+</div>
       
       {/* Indicadores */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
