@@ -13,7 +13,7 @@ export default function Hero() {
       textColor: "text-black",
       title: "El primer impacto\nempieza en el\nempaque.",
       description: "Vestibulum ipsum augue, tincidunt ut arcu id, venenatis efficitur leo.",
-      image: "/mezclado.png",
+      image: "/Slide-1.png",
       badges: []
     },
     {
@@ -23,7 +23,7 @@ export default function Hero() {
       textColor: "text-black",
       title: "Cada empaque\ncuenta una\nhistoria.",
       description: "La solución perfecta para alimentos, cosméticos y más. Totalmente personalizables y con barreras de alta protección.",
-      image: "/pack.png",
+      image: "/Slide-2.png",
       badges: []
     },
     {
@@ -33,7 +33,7 @@ export default function Hero() {
       textColor: "text-white",
       title: "Envases de\nvidrio y\nfrascos\nelegantes",
       description: "Dale a tu producto un toque de distinción con nuestros frascos de vidrio. Ideales para cosmética y productos gourmet.",
-      image: "/plana-1.png",
+      image: "/Slide-3.png",
       badges: []
     }
   ];
