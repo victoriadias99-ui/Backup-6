@@ -14,8 +14,8 @@ export default function Features() {
         {/* Middle: Text */}
         <div className="flex-grow text-center">
           <h2 className="text-sm md:text-lg font-black text-black leading-tight tracking-tighter uppercase mx-auto">
-            Pedido mínimo 50 unidades.<br />
-            Envío a todo País.
+            Pedido mínimo 5000 unidades.<br />
+            Envío a todo el país.
           </h2>
         </div>
 
