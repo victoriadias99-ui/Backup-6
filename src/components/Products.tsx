@@ -66,7 +66,7 @@ export default function Products({ onOpenConfigurator }: { onOpenConfigurator: (
               </ul>
 
               <p className="text-lg font-bold text-gray-900 mb-5">
-                A partir de 50 piezas
+                A partir de 5000 piezas
               </p>
 
               <div className="flex flex-col items-center gap-3 w-full max-w-[260px]">
