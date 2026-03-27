@@ -6,7 +6,7 @@ export default function Products({ onOpenConfigurator }: { onOpenConfigurator: (
     {
       name: "Bolsas doypack",
       image: "/packaging-doypack.png",
-      link: "/bolsas-doypack",
+      link: "/p-plastico",
       features: [
         "LIGERAS",
         "PERSONALIZABLES",
@@ -18,7 +18,7 @@ export default function Products({ onOpenConfigurator }: { onOpenConfigurator: (
     {
       name: "Bolsas planas",
       image: "/packaging-Bolsas-planas-1.png",
-      link: "/bolsas-planas",
+      link: "/b-plana",
       features: [
         "LIGERAS Y FLEXIBLES",
         "PERSONALIZABLES",
