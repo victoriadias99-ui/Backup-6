@@ -1,4 +1,4 @@
-import { ShoppingCart, User, Search, ChevronDown, Phone, Mail, Menu, X } from 'lucide-react';
+import { ShoppingCart, ChevronDown, Phone, Mail, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -50,20 +50,6 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
                 </Link>
               </div>
             )}
-          </div>
-          <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-[#004FFF] h-16 uppercase transition-colors">
-              Servicios <ChevronDown size={14} />
-            </button>
-            
-            <div className="absolute top-full left-0 w-48 bg-white text-gray-900 shadow-xl rounded-b-xl overflow-hidden border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-              <Link 
-                to="/servicios" 
-                className="block px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                Nuestros Servicios
-              </Link>
-            </div>
           </div>
           
           <div 
@@ -153,11 +139,6 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
               <div className="text-xs font-black text-gray-400 uppercase tracking-wider">Productos</div>
               <Link to="/bolsas-doypack" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Bolsas Doypack</Link>
               <Link to="/bolsas-planas" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Bolsas Planas</Link>
-            </div>
-            
-            <div className="flex flex-col gap-2">
-              <div className="text-xs font-black text-gray-400 uppercase tracking-wider">Servicios</div>
-              <Link to="/servicios" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Nuestros Servicios</Link>
             </div>
 
             <div className="flex flex-col gap-2">
