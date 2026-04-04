@@ -57,13 +57,13 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Quiénes Somos Section */}
-          <div className="mb-32">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C4EB00]/20 text-black text-xs font-bold mb-12 tracking-wider uppercase">
+          <div className="mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C4EB00]/20 text-black text-xs font-bold mb-6 tracking-wider uppercase">
               <Zap size={14} className="text-[#004FFF]" />
               La primera fábrica digital de bolsas
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center">
               {/* Imagen izquierda */}
               <div className="relative order-2 md:order-1">
                 <div className="absolute -inset-6 bg-[#C4EB00]/20 rounded-[3rem] transform -rotate-3 -z-10"></div>
@@ -77,11 +77,11 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
 
               {/* Contenido derecha */}
               <div className="order-1 md:order-2">
-                <h1 className="text-5xl md:text-6xl font-black text-black mb-8 leading-tight uppercase tracking-tighter">
+                <h1 className="text-5xl md:text-6xl font-black text-black mb-6 leading-tight uppercase tracking-tighter">
                   ¿Quiénes <br className="hidden md:block" />somos?
                 </h1>
 
-                <div className="space-y-5">
+                <div className="space-y-3">
                   <p className="text-lg text-gray-700 leading-relaxed font-medium">
                     Somos <span className="font-black text-black">Forprini</span>. Y nacimos con una idea clara: ayudar a que las marcas se vean tan bien como lo que hay detrás.
                   </p>
@@ -94,7 +94,7 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
                   <p className="text-base text-gray-600 leading-relaxed">
                     Creemos en los detalles, en las ideas bien hechas y en el poder que tiene un buen empaque para cambiar la percepción de un producto.
                   </p>
-                  <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#004FFF] pl-6 py-4 bg-[#004FFF]/5 rounded-r-lg">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#004FFF] pl-6 py-2 bg-[#004FFF]/5 rounded-r-lg">
                     No somos solo una empresa de packaging. Somos un equipo que escucha, propone y construye junto a vos.
                   </p>
                 </div>
@@ -103,15 +103,15 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
           </div>
 
           {/* Qué Hacemos Section */}
-          <div className="mb-32">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="mb-20">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center">
               {/* Contenido izquierda */}
               <div>
-                <h2 className="text-5xl md:text-6xl font-black text-black mb-8 leading-tight uppercase tracking-tighter">
+                <h2 className="text-5xl md:text-6xl font-black text-black mb-6 leading-tight uppercase tracking-tighter">
                   ¿Qué <br className="hidden md:block" />hacemos?
                 </h2>
 
-                <div className="space-y-5">
+                <div className="space-y-3">
                   <p className="text-lg text-gray-700 leading-relaxed font-medium">
                     Acompañamos a marcas a crecer a través de su packaging.
                   </p>
@@ -124,14 +124,14 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
                   <p className="text-base text-gray-600 leading-relaxed">
                     Nos encargamos de acercarte opciones de packaging de calidad, importadas y adaptadas a lo que tu marca necesita hoy, pero también a hacia dónde quiere ir.
                   </p>
-                  <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#FF9EDE] pl-6 py-4 bg-[#FF9EDE]/5 rounded-r-lg">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#FF9EDE] pl-6 py-2 bg-[#FF9EDE]/5 rounded-r-lg">
                     Porque cuando tu producto se ve bien, transmite confianza. Y cuando transmite confianza… vende más.
                   </p>
                 </div>
 
                 <button
                   onClick={onOpenConfigurator}
-                  className="mt-8 bg-[#FF9EDE] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl"
+                  className="mt-6 bg-[#FF9EDE] text-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-tighter hover:scale-105 transition-all shadow-xl"
                 >
                   Empezar ahora
                 </button>
