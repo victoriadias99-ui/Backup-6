@@ -58,6 +58,7 @@ export default function Markets() {
                   alt={m.name}
                   className="w-12 h-12 object-contain"
                   style={{ filter: 'brightness(0) invert(1)' }}
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <h3 className="font-bold text-white mb-4 text-sm h-10 flex items-center">{m.name}</h3>
