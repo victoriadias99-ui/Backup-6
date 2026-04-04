@@ -45,11 +45,11 @@ export default function Products({ onOpenConfigurator }: { onOpenConfigurator: (
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {productList.map((product) => (
             <div key={product.name} className="flex flex-col items-center">
-              <div className="w-full aspect-square max-w-[260px] mb-4 rounded-xl overflow-hidden">
+              <div className="w-full aspect-square max-w-[260px] mb-4">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-3xl"
                   referrerPolicy="no-referrer"
                 />
               </div>
