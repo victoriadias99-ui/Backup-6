@@ -18,7 +18,7 @@ import Footer from './Footer';
 const reasons = [
   {
     icon: Leaf,
-    title: "SOSTENIBILIDAD MEDIOAMBIENTAL",
+    title: "SOSTENIBILIDAD SOCIAMBIENTAL",
     desc: "Los envases flexibles generan un menor impacto medioambiental a lo largo de su ciclo de vida, más de un 60% menos que las alternativas rígidas.",
     color: "bg-emerald-50 text-emerald-600"
   },
@@ -35,46 +35,16 @@ const reasons = [
     color: "bg-orange-50 text-orange-600"
   },
   {
-    icon: Lock,
-    title: "CIERRE RESELLABLE",
-    desc: "Permite conservar el producto tras la primera apertura, manteniendo la frescura sin necesidad de transferir a otro recipiente.",
-    color: "bg-purple-50 text-purple-600"
-  },
-  {
-    icon: MessageSquare,
-    title: "COMUNICACIÓN",
-    desc: "Una ventana al mundo para atraer consumidores con gráficos llamativos. Posibilidad de ventana transparente para mostrar el contenido.",
-    color: "bg-pink-50 text-pink-600"
-  },
-  {
     icon: Layers,
     title: "TIRADAS PEQUEÑAS",
     desc: "Imprime desde tan solo 50 unidades. Ideal para pruebas de mercado o ediciones limitadas sin desperdicio.",
     color: "bg-indigo-50 text-indigo-600"
   },
   {
-    icon: Disc,
-    title: "BOBINAS",
-    desc: "Personalizamos bobinas para empresas que ya cuentan con sus propias máquinas de envasado automático.",
-    color: "bg-slate-50 text-slate-600"
-  },
-  {
-    icon: Palette,
-    title: "MULTIGRÁFICO",
-    desc: "Pide diferentes diseños en un mismo pedido (mismo tamaño y material) sin costes adicionales gracias a la impresión digital.",
-    color: "bg-yellow-50 text-yellow-600"
-  },
-  {
     icon: ShieldCheck,
     title: "CONSERVACIÓN ÓPTIMA",
     desc: "Termosellables y aptas para vacío. Válvula de desgasificación para café que permite salida de gases sin entrada de aire.",
     color: "bg-cyan-50 text-cyan-600"
-  },
-  {
-    icon: Star,
-    title: "MADE IN ITALY",
-    desc: "Producción íntegramente italiana en nuestra planta de Romano d'Ezzelino, bajo los más altos estándares de calidad.",
-    color: "bg-red-50 text-red-600"
   }
 ];
 
@@ -94,10 +64,10 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
                 La primera fábrica digital de bolsas
               </div>
               <h1 className="text-4xl md:text-6xl font-black text-black mb-8 leading-tight uppercase tracking-tighter">
-                Packstyle: quiénes somos y qué hacemos
+                Forprini: quiénes somos y qué hacemos
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed font-medium">
-                Packstyle es la primera fábrica digital de bolsas de Europa. Ofrecemos la posibilidad de personalizar tu propio packaging flexible, eligiendo entre bolsas planas y doypack, con dimensiones y acabados que se adaptan a cualquier producto.
+                Forprini es la primera fábrica digital de bolsas de Europa. Ofrecemos la posibilidad de personalizar tu propio packaging flexible, eligiendo entre bolsas planas y doypack, con dimensiones y acabados que se adaptan a cualquier producto.
               </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4">
@@ -123,22 +93,22 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
             
             <div className="relative">
               <div className="absolute -inset-6 bg-[#FDEDD4] rounded-[3rem] transform rotate-3 -z-10"></div>
-              <img 
-                src="https://picsum.photos/seed/factory-about/800/800" 
-                alt="Packstyle Factory" 
+              <img
+                src="https://picsum.photos/seed/factory-about/800/800"
+                alt="Forprini Factory"
                 className="relative rounded-[2.5rem] shadow-2xl object-cover w-full h-[500px]"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
 
-          {/* 10 Reasons Grid */}
+          {/* 5 Reasons Grid */}
           <div>
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-black text-black mb-6 uppercase tracking-tighter">¿Por qué elegir Packstyle?</h2>
-              <p className="text-xl text-gray-600 font-medium">10 buenas razones para confiar en nuestro packaging flexible</p>
+              <h2 className="text-4xl md:text-5xl font-black text-black mb-6 uppercase tracking-tighter">Por que elegir Forprini?</h2>
+              <p className="text-xl text-gray-600 font-medium">5 buenas razones para confiar en nuestro packaging flexible</p>
             </div>
-            
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
               {reasons.map((reason, i) => (
                 <div 

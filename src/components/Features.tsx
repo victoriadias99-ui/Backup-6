@@ -21,9 +21,9 @@ export default function Features() {
 
         {/* Right: Illustration/Image */}
         <div className="flex-shrink-0 relative h-12 md:h-16 w-44 md:w-56 overflow-visible">
-          <img 
-            src="/landing.png" 
-            alt="Packstyle" 
+          <img
+            src="/landing.png"
+            alt="Forprini"
             className="absolute w-40 md:w-64 object-contain z-10"
             style={{ bottom: '0px', top: '-30px', left: '50%', transform: 'translateX(-50%)' }}
             referrerPolicy="no-referrer"
