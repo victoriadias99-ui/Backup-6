@@ -1,37 +1,13 @@
 export default function Markets() {
   const markets = [
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/989608.png",
-      name: "Alimentación"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/6744480.png",
-      name: "Café"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/2918009.png",
-      name: "Productos naturales"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/6330213.png",
-      name: "Cosmesi"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/4773188.png",
-      name: "Suplementos"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/2447774.png",
-      name: "Líquidos"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/8463112.png",
-      name: "Alimentos para mascotas"
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/7537500.png",
-      name: "Infusiones y especias"
-    },
+    { icon: "/alimentacion.png",      name: "Alimentación" },
+    { icon: "/cafe.png",               name: "Café" },
+    { icon: "/productos-naturales.png",name: "Productos naturales" },
+    { icon: "/comestica.png",          name: "Cosmética" },
+    { icon: "/suplemento.png",         name: "Suplementos" },
+    { icon: "/liquido.png",            name: "Líquidos" },
+    { icon: "/mascota.png",            name: "Alimentos para mascotas" },
+    { icon: "/infusiones.png",         name: "Infusiones y especias" },
   ];
 
   return (
