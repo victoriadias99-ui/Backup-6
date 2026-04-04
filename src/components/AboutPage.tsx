@@ -63,25 +63,45 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
                 <Zap size={14} className="text-[#004FFF]" />
                 La primera fábrica digital de bolsas
               </div>
-              <h1 className="text-4xl md:text-6xl font-black text-black mb-8 leading-tight uppercase tracking-tighter">
-                Forprini: quiénes somos y qué hacemos
+              <h1 className="text-4xl md:text-5xl font-black text-black mb-10 leading-tight uppercase tracking-tighter">
+                ¿Quiénes somos?
               </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed font-medium">
-                Forprini es la primera fábrica digital de bolsas de Europa. Ofrecemos la posibilidad de personalizar tu propio packaging flexible, eligiendo entre bolsas planas y doypack, con dimensiones y acabados que se adaptan a cualquier producto.
-              </p>
-              <div className="space-y-6 mb-10">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-[#004FFF] rounded-full p-1.5 shadow-lg shadow-[#004FFF]/20">
-                    <CheckCircle2 size={18} className="text-white" />
-                  </div>
-                  <p className="text-gray-800 font-bold text-lg">Personalización total en poco tiempo.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-[#004FFF] rounded-full p-1.5 shadow-lg shadow-[#004FFF]/20">
-                    <CheckCircle2 size={18} className="text-white" />
-                  </div>
-                  <p className="text-gray-800 font-bold text-lg">Protección avanzada con barrera EVOH.</p>
-                </div>
+
+              <div className="space-y-6 mb-12">
+                <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                  Somos <span className="font-black text-black">Forprini</span>. Y nacimos con una idea clara: ayudar a que las marcas se vean tan bien como lo que hay detrás.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Sabemos lo que implica emprender, porque estamos cerca de ese mundo todos los días. Vemos el esfuerzo, las dudas, las ganas de crecer… y también lo difícil que puede ser tomar decisiones cuando todo depende de vos.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Por eso creamos Forprini: para acompañar a pequeñas y medianas marcas en uno de los puntos más importantes de su crecimiento — cómo se presentan al mundo.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Creemos en los detalles, en las ideas bien hechas y en el poder que tiene un buen empaque para cambiar la percepción de un producto.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#004FFF] pl-4">
+                  No somos solo una empresa de packaging. Somos un equipo que escucha, propone y construye junto a vos.
+                </p>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-black text-black mb-8 leading-tight uppercase tracking-tighter">
+                ¿Qué hacemos?
+              </h2>
+
+              <div className="space-y-5 mb-10">
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Acompañamos a marcas a crecer a través de su packaging. En Forprini ayudamos a pequeñas y medianas empresas a desarrollar cómo se presentan al mundo, con soluciones reales, accesibles y pensadas para cada etapa del negocio.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Sabemos que muchas veces dar el siguiente paso no es tan simple: no siempre es fácil encontrar proveedores confiables, entender qué tipo de empaque elegir o lograr una imagen que esté a la altura de tu producto.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Nos encargamos de acercarte opciones de packaging de calidad, importadas y adaptadas a lo que tu marca necesita hoy, pero también a hacia dónde quiere ir. Trabajamos con distintos formatos y soluciones para que puedas profesionalizar tu producto, mejorar tu presentación y competir mejor en el mercado.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold border-l-4 border-[#FF9EDE] pl-4">
+                  Pero más allá del empaque en sí, lo que hacemos es acompañarte en decisiones que hacen crecer tu marca. Porque cuando tu producto se ve bien, transmite confianza. Y cuando transmite confianza… vende más.
+                </p>
               </div>
               <button 
                 onClick={onOpenConfigurator}
