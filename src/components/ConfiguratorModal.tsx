@@ -47,8 +47,8 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
   const [isSubmittingCotizacion, setIsSubmittingCotizacion] = useState(false);
 
   const products = [
-    { name: "Bolsas doypack", image: "/packaging-doypack.png" },
-    { name: "Bolsas planas", image: "/packaging-Bolsas planas-1.png" },
+    { name: "Bolsas doypack", image: "/p-plastico.png" },
+    { name: "Bolsas planas", image: "/b-plana.png" },
   ];
 
   const formatos = ["4.5x13 (cm)", "8x11 (cm)", "15x17 (cm)", "19x27 (cm)", "30x35 (cm)"];
@@ -314,8 +314,8 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                         onClick={() => setSelectedProduct(p.name)}
                         className="p-6 border-2 border-gray-100 rounded-xl hover:border-packstyle-green hover:bg-green-50 transition-all text-center font-bold text-gray-800 shadow-sm hover:shadow-md"
                       >
-                        <div className="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center text-gray-400 overflow-hidden">
-                          <img src={p.image} alt={p.name} className="w-full h-full object-contain hover:scale-110 transition-transform duration-300" referrerPolicy="no-referrer" />
+                        <div className="w-full aspect-square rounded-3xl overflow-hidden mb-4">
+                          <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" referrerPolicy="no-referrer" />
                         </div>
                         {p.name}
                       </button>
