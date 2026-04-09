@@ -357,8 +357,6 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                           key={f}
                           onClick={() => {
                             setFormato(f);
-                            setMaterial(null);
-                            setAcabado(null);
                           }}
                           className={`p-4 rounded-xl border-2 transition-all text-center ${formato === f ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green'}`}
                         >
@@ -374,8 +372,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                   </div>
 
                   {/* Paso 2: Material */}
-                  {formato && (
-                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                  <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                       <h3 className="text-xl font-bold mb-6">2. Elige el material</h3>
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                         {materiales.map(m => (
@@ -383,7 +380,6 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                             key={m.name}
                             onClick={() => {
                               setMaterial(m.name);
-                              setAcabado(null);
                             }}
                             className={`p-4 rounded-xl border-2 transition-all text-center ${material === m.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green'}`}
                           >
@@ -395,11 +391,9 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                         ))}
                       </div>
                     </div>
-                  )}
 
                   {/* Paso 3: Acabado */}
-                  {material && (
-                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                  <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                       <h3 className="text-xl font-bold mb-6">3. Elige el acabado</h3>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {acabados.map(a => (
@@ -418,7 +412,6 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                         ))}
                       </div>
                     </div>
-                  )}
 
                   {/* Paso 4: Complementos */}
                   {false && acabado && (
