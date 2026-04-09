@@ -60,9 +60,13 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
     { name: "Bolsa Transparente", image: "/Bolsa-transparente.png" }
   ];
   const acabados = [
-    { name: "Acabado soft touch", image: "/soft.png" },
-    { name: "Acabado mate", image: "/mate.png" },
-    { name: "Acabado satinado", image: "/Satinado.png" }
+    { name: "Acabado satinado", image: "/acabado-satinado.png" },
+    { name: "Acabado soft touch", image: "/soft-touch.png" },
+    { name: "Acabado mate", image: "/acabado-mate.png" },
+    { name: "Cierre resellable", image: "/Cierre-resellable.png" },
+    { name: "Orificio", image: "/orificio.png" },
+    { name: "Válvula de desgasificación", image: "/valvula.png" },
+    { name: "Boquilla", image: "/boquilla.png" },
   ];
 
   const zips = [
