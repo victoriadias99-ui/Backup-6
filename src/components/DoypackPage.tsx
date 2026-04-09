@@ -12,12 +12,12 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
           <ArrowLeft size={20} /> Volver al inicio
         </Link>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center items-center">
-           <img
-           src="/p-plastico.png"
-           alt="Bolsas Doypack"
-           className="w-full max-w-[420px] aspect-[3/4] object-contain drop-shadow-2xl"
-           />
+          <div className="w-full aspect-square rounded-3xl overflow-hidden">
+            <img
+              src="/p-plastico.png"
+              alt="Bolsas Doypack"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
           <div>
             <h1 className="text-4xl font-black text-gray-900 mb-6">Bolsas Doypack</h1>

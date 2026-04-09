@@ -10,7 +10,8 @@
       "Bash(git fetch:*)",
       "Bash(ls .env*)",
       "Bash(git commit:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
