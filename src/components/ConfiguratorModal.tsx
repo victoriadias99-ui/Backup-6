@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { X, User, Building2, Mail, Phone, Minus, Plus, MessageCircle, HelpCircle, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
+import { X, User, Building2, Mail, Phone, Minus, Plus, MessageCircle, HelpCircle, ArrowLeft, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 
 // ─── URL del Google Apps Script Web App ───────────────────────────────────────
 // Reemplazá este valor con la URL que te da Google al publicar el script.
