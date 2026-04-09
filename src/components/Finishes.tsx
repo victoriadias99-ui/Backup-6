@@ -13,22 +13,22 @@ export default function Finishes() {
     {
       title: "Acabado satinado",
       desc: "Para que tu producto destaque en los estantes, elige el acabado satinado. El efecto brillo hace que los colores se vean relucientes y saturados, para una excelente reproducción gráfica.",
-      img: "/Satinado.png"
+      img: "/acabado-satinado.png"
     },
     {
       title: "Acabado soft touch",
       desc: "El refinamiento se puede ver y sentir. El acabado soft touch hace que tu envase quede elegante y aterciopelado: te parecerá estar tocando piel de ante.",
-      img: "/soft.png"
+      img: "/soft-touch.png"
     },
     {
       title: "Acabado mate",
       desc: "Puedes hacer que tus bolsas destaquen con estilo utilizando la elegante modernidad del acabado mate. Para un efecto premium y sofisticado.",
-      img: "/mate.png"
+      img: "/acabado-mate.png"
     },
     {
       title: "Cierre resellable",
       desc: "El cierre permite abrir y volver a cerrar las bolsas después de usarlas, lo que ayuda a proteger y a conservar las propiedades del producto que contienen.",
-      img: "/cierre.png"
+      img: "/Cierre-resellable.png"
     },
     {
       title: "Orificio",
