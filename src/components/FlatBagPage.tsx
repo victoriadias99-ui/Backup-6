@@ -13,11 +13,11 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
         </Link>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="bg-purple-200 rounded-3xl min-h-[900px] flex justify-center items-center overflow-hidden">
+          <div className="rounded-3xl h-[900px] overflow-hidden">
             <img
               src="/b-plana.png"
               alt="Bolsas Planas"
-              className="h-full w-full object-fill drop-shadow-2xl"
+              className="h-full w-full object-fill"
             />
           </div>
 
