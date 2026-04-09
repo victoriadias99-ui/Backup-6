@@ -109,12 +109,12 @@ export default function Finishes() {
                 </div>
 
                 {/* Image Container */}
-                <div className="w-full lg:w-56 h-56 lg:h-auto flex-shrink-0 flex items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-gray-50 to-white p-8 relative z-10 border border-gray-100/50 shadow-inner">
-                  <img 
-                    src={item.img} 
-                    alt={item.title} 
-                    className="w-full h-full object-contain mix-blend-multiply transition-transform duration-1000 ease-out group-hover/card:scale-110" 
-                    referrerPolicy="no-referrer" 
+                <div className="w-full lg:w-56 flex-shrink-0 aspect-square rounded-3xl overflow-hidden relative z-10">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover/card:scale-110"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
 
