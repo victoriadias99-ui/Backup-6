@@ -37,10 +37,7 @@ export default function Markets() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <h3 className="font-bold text-white mb-4 text-sm h-10 flex items-center">{m.name}</h3>
-              <span className="text-xs text-white/70 uppercase tracking-wider group-hover:text-white transition-colors">
-                MÁS INFORMACIÓN
-              </span>
+              <h3 className="font-bold text-white text-sm h-10 flex items-center">{m.name}</h3>
             </div>
           ))}
         </div>
