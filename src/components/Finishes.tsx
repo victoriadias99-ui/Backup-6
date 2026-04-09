@@ -156,6 +156,12 @@ export default function Finishes() {
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
+        .swiper-wrapper {
+          align-items: stretch;
+        }
+        .swiper-slide {
+          height: auto;
+        }
         .swiper-pagination {
           bottom: -25px !important;
         }
