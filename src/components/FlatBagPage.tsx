@@ -11,32 +11,31 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
         <Link to="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-packstyle-green mb-8">
           <ArrowLeft size={20} /> Volver al inicio
         </Link>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
-         <div className="flex justify-center items-center">
-           <img
-           src="/b-plana.png"
-           alt="Bolsas Planas"
-           className="w-full max-w-[420px] aspect-[3/4] object-contain drop-shadow-2xl"
-           />
-          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/b-plana.png"
+              alt="Bolsas Planas"
+              className="w-full max-w-[420px] aspect-[3/4] object-contain drop-shadow-2xl"
+            />
           </div>
 
           <div>
             <h1 className="text-4xl font-black text-gray-900 mb-6">Bolsas Planas</h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Nuestras bolsas planas son la solución de embalaje más versátil y económica. 
-              Ideales para productos que no requieren una base estable, ofreciendo una 
-              presentación limpia y profesional.
+              Nuestras bolsas planas son la solucion de embalaje mas versatil y economica.
+              Ideales para productos que no requieren una base estable, ofreciendo una
+              presentacion limpia y profesional.
             </p>
-            
+
             <div className="space-y-4 mb-10">
-              <h3 className="font-bold text-lg">Características principales:</h3>
+              <h3 className="font-bold text-lg">Caracteristicas principales:</h3>
               <ul className="grid grid-cols-1 gap-3">
                 {[
-                  "Diseño minimalista y eficiente",
-                  "Opción de orificio para colgar (Eurohole)",
-                  "Muescas de fácil apertura",
+                  "Diseno minimalista y eficiente",
+                  "Opcion de orificio para colgar (Eurohole)",
+                  "Muescas de facil apertura",
                   "Materiales de alta resistencia",
                   "Perfectas para muestras y monodosis"
                 ].map((item, i) => (
@@ -47,9 +46,9 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
                 ))}
               </ul>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
+              <button
                 onClick={onOpenConfigurator}
                 className="flex-1 bg-[#C4EB00] text-black px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all transform hover:scale-105"
               >
