@@ -302,21 +302,22 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
           {/* ── CONFIGURADOR ─────────────────────────────────────────── */}
           {phase === 'configurator' && (
             <>
-              {!selectedProduct ? (
-                <>
-                  <button
-                    onClick={() => setPhase('decision')}
-                    className="flex items-center gap-2 text-gray-400 hover:text-gray-600 font-bold text-sm mb-6 transition-colors"
-                  >
-                    <ArrowLeft size={16} /> Volver atrás
-                  </button>
+              <button
+                onClick={() => setPhase('decision')}
+                className="flex items-center gap-2 text-gray-400 hover:text-gray-600 font-bold text-sm mb-6 transition-colors"
+              >
+                <ArrowLeft size={16} /> Volver atrás
+              </button>
+              <div className="space-y-12">
+                  {/* Selección de producto */}
+                  <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Empiece por elegir el producto</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {products.map(p => (
                       <button
                         key={p.name}
                         onClick={() => setSelectedProduct(p.name)}
-                        className="p-6 border-2 border-gray-100 rounded-xl hover:border-packstyle-green hover:bg-green-50 transition-all text-center font-bold text-gray-800 shadow-sm hover:shadow-md"
+                        className={`p-6 border-2 rounded-xl transition-all text-center font-bold text-gray-800 shadow-sm hover:shadow-md ${selectedProduct === p.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green hover:bg-green-50'}`}
                       >
                         <div className="w-full aspect-square rounded-3xl overflow-hidden mb-4">
                           <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" referrerPolicy="no-referrer" />
@@ -325,27 +326,9 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                       </button>
                     ))}
                   </div>
-                </>
-              ) : (
-                <div className="space-y-12">
-                  <div className="flex justify-between items-center border-b pb-6">
-                    <div>
-                      <h2 className="text-3xl font-bold text-gray-900">{selectedProduct}</h2>
-                      <p className="text-gray-500 mt-1">Configurador paso a paso</p>
-                    </div>
-                    <button onClick={() => {
-                      setSelectedProduct(null);
-                      setFormato(null);
-                      setMaterial(null);
-                      setAcabado(null);
-                      setZipResellable(null);
-                      setOrificio(null);
-                      setValvula(null);
-                      setBoquilla(null);
-                    }} className="text-sm font-bold text-packstyle-green hover:underline bg-green-50 px-4 py-2 rounded-full">
-                      Cambiar producto
-                    </button>
                   </div>
+
+                  {selectedProduct && (<>
 
                   {/* Paso 1: Formato */}
                   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -542,8 +525,8 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                       </button>
                     </div>
                   )}
+                  </>)}
                 </div>
-              )}
             </>
           )}
 
