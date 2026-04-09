@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/c/Users/vicki/Forprini/ConfiguratorModal.tsx\" \"src/components/ConfiguratorModal.tsx\")",
+      "Bash(cp \"/c/Users/vicki/Forprini/.env.example\" \".env.example\")",
+      "Read(//c/Users/vicki/**)",
+      "Read(//mnt/c/Users/vicki/**)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(ls .env*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)"
+    ]
+  }
+}
