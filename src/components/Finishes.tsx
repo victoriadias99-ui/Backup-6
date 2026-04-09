@@ -1,4 +1,4 @@
-import { PlusCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -129,17 +129,6 @@ export default function Finishes() {
                     </p>
                   </div>
                   
-                  <div className="mt-auto pt-8 border-t border-gray-100/80 flex justify-center lg:justify-start">
-                    <a 
-                      href="#" 
-                      className="inline-flex items-center gap-4 text-[#7F35F1] font-bold text-xs tracking-[0.3em] hover:gap-6 transition-all group/link uppercase"
-                    >
-                      DESCUBRIR MÁS
-                      <div className="w-8 h-8 rounded-full border border-[#7F35F1]/20 flex items-center justify-center group-hover/link:bg-[#7F35F1] group-hover/link:border-[#7F35F1] group-hover/link:text-white transition-all duration-300">
-                        <PlusCircle size={16} className="group-hover/link:rotate-90 transition-transform" />
-                      </div>
-                    </a>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
