@@ -86,7 +86,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
     { name: "Con boquilla", image: "/boquilla.png" }
   ];
 
-  const isStep4Complete = zipResellable && orificio && valvula && boquilla;
+  const isStep4Complete = !!acabado; // Paso 4 oculto: se considera completo al elegir acabado
   const isFormValid = userData.nombre && userData.email && userData.telefono;
 
   // ─── Paso 1: guarda el lead en Google Sheets y avanza ─────────────────────
@@ -421,7 +421,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                   )}
 
                   {/* Paso 4: Complementos */}
-                  {acabado && (
+                  {false && acabado && (
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8">
                       <h3 className="text-xl font-bold mb-6">4. Elige los complementos</h3>
 
