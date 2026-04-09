@@ -13,11 +13,11 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
         </Link>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="bg-purple-200 rounded-3xl p-12 flex justify-center items-center min-h-[600px]">
+          <div className="bg-purple-200 rounded-3xl p-8 flex justify-center items-center min-h-[700px]">
             <img
               src="/p-plastico.png"
               alt="Bolsas Doypack"
-              className="max-h-[700px] max-w-[300px] object-contain drop-shadow-2xl"
+              className="max-h-[600px] max-w-[450px] w-full object-contain drop-shadow-2xl"
             />
           </div>
 
