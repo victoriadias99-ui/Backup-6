@@ -17,7 +17,7 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
             <img
               src="/b-plana.png"
               alt="Bolsas Planas"
-              className="h-full w-full object-cover drop-shadow-2xl"
+              className="h-full w-full object-fill drop-shadow-2xl"
             />
           </div>
 
