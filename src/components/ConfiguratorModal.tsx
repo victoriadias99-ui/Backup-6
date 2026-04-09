@@ -300,6 +300,12 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
             <>
               {!selectedProduct ? (
                 <>
+                  <button
+                    onClick={() => setPhase('decision')}
+                    className="flex items-center gap-2 text-gray-400 hover:text-gray-600 font-bold text-sm mb-6 transition-colors"
+                  >
+                    <ArrowLeft size={16} /> Volver atrás
+                  </button>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Empiece por elegir el producto</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {products.map(p => (
@@ -557,12 +563,31 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
               <p className="text-gray-500 mb-10 max-w-sm mx-auto">
                 Recibimos tu solicitud. Nuestro equipo revisará los detalles y te contactará en breve a <span className="font-bold text-gray-800">{userData.email}</span>.
               </p>
-              <button
-                onClick={onClose}
-                className="bg-[#FF9EDE] text-black font-bold px-10 py-3 rounded-full hover:opacity-90 transition-all shadow-md hover:scale-105"
-              >
-                Cerrar
-              </button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button
+                  onClick={() => {
+                    setSelectedProduct(null);
+                    setFormato(null);
+                    setMaterial(null);
+                    setAcabado(null);
+                    setZipResellable(null);
+                    setOrificio(null);
+                    setValvula(null);
+                    setBoquilla(null);
+                    setCantidad(500);
+                    setPhase('configurator');
+                  }}
+                  className="flex items-center gap-2 text-gray-500 hover:text-gray-700 font-bold px-8 py-3 rounded-full border border-gray-200 hover:border-gray-400 transition-all"
+                >
+                  <ArrowLeft size={16} /> Volver al formulario
+                </button>
+                <button
+                  onClick={onClose}
+                  className="bg-[#FF9EDE] text-black font-bold px-10 py-3 rounded-full hover:opacity-90 transition-all shadow-md hover:scale-105"
+                >
+                  Cerrar
+                </button>
+              </div>
             </div>
           )}
 
