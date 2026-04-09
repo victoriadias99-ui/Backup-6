@@ -14,11 +14,10 @@ export default function FlatBagPage({ onOpenConfigurator }: { onOpenConfigurator
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 rounded-3xl p-12 flex justify-center">
-            <img 
-              src="https://picsum.photos/seed/flat-bag/600/800" 
-              alt="Bolsas Planas" 
+            <img
+              src="/b-plana.png"
+              alt="Bolsas Planas"
               className="max-h-[500px] object-contain drop-shadow-2xl"
-              referrerPolicy="no-referrer"
             />
           </div>
           

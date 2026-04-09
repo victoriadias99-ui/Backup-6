@@ -14,11 +14,10 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 rounded-3xl p-12 flex justify-center">
-            <img 
-              src="https://picsum.photos/seed/doypack-bag/600/800" 
-              alt="Bolsas Doypack" 
+            <img
+              src="/p-plastico.png"
+              alt="Bolsas Doypack"
               className="max-h-[500px] object-contain drop-shadow-2xl"
-              referrerPolicy="no-referrer"
             />
           </div>
           
