@@ -10,7 +10,7 @@ export default function Materials() {
       id: "papel-reciclable",
       name: "PAPEL RECICLABLE",
       title: "Papel Reciclable",
-      image: "/reciclable.png",
+      image: "/papel-reciclable.png",
       description: "Una opción ecológica y sostenible. Nuestro papel reciclable está diseñado para ofrecer una barrera adecuada para productos secos, manteniendo un compromiso firme con el medio ambiente y la economía circular.",
       features: [
         { icon: <Feather size={18} className="text-gray-400" />, text: "100% RECICLABLE" },
@@ -23,7 +23,7 @@ export default function Materials() {
       id: "pelicula-transparente",
       name: "BOLSA TRANSPARENTE",
       title: "Bolsa Transparente",
-      image: "/transparente.png",
+      image: "/bolsa-transparente.png",
       description: "Permite que tu producto sea el protagonista. Esta película transparente ofrece una excelente visibilidad del contenido mientras mantiene propiedades de barrera esenciales y es 100% reciclable.",
       features: [
         { icon: <Sun size={18} className="text-gray-400" />, text: "ALTA TRANSPARENCIA" },
