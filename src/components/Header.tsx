@@ -108,8 +108,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
         {/* Right Actions Section */}
         <div className="flex items-center justify-end gap-2 md:gap-4">
           <div className="hidden xl:flex flex-col items-end text-[10px] text-black/70 font-bold mr-2">
-            <div className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} className="text-[#004FFF]" /> sales.es@packstyle.com</div>
-            <div className="flex items-center gap-1.5 whitespace-nowrap"><Phone size={12} className="text-[#004FFF]" /> +39 04241660227</div>
+            <div className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} className="text-[#004FFF]" /> soporte@forprini.com</div>
           </div>
           
           <button 
@@ -154,10 +153,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
             
             <div className="pt-4 border-t border-gray-100 flex flex-col gap-3">
               <div className="flex items-center gap-2 text-[10px] text-black/70 font-bold">
-                <Mail size={12} className="text-[#004FFF]" /> sales.es@packstyle.com
-              </div>
-              <div className="flex items-center gap-2 text-[10px] text-black/70 font-bold">
-                <Phone size={12} className="text-[#004FFF]" /> +39 04241660227
+                <Mail size={12} className="text-[#004FFF]" /> soporte@forprini.com
               </div>
             </div>
           </div>
