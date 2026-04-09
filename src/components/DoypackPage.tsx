@@ -11,14 +11,15 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
         <Link to="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-packstyle-green mb-8">
           <ArrowLeft size={20} /> Volver al inicio
         </Link>
-        
-        <div className="bg-purple-200 rounded-3xl flex justify-center items-center overflow-hidden p-8">
-  <img
-    src="/p-plastico.png"
-    alt="Bolsas Doypack"
-    className="max-h-[500px] w-auto object-contain drop-shadow-2xl"
-  />
-</div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-purple-200 rounded-3xl flex justify-center items-center overflow-hidden p-8">
+            <img
+              src="/p-plastico.png"
+              alt="Bolsas Doypack"
+              className="max-h-[500px] w-auto object-contain drop-shadow-2xl"
+            />
+          </div>
 
           <div>
             <h1 className="text-4xl font-black text-gray-900 mb-6">Bolsas Doypack</h1>
@@ -27,7 +28,7 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
               Su diseño permite que se mantenga de pie por sí sola, lo que la hace ideal para la 
               exhibición en estantes y el almacenamiento eficiente.
             </p>
-            
+
             <div className="space-y-4 mb-10">
               <h3 className="font-bold text-lg">Características principales:</h3>
               <ul className="grid grid-cols-1 gap-3">
@@ -37,27 +38,3 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
                   "Válvula desgasificadora disponible",
                   "Alta barrera contra humedad y oxígeno",
                   "Personalización total en toda la superficie"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="text-packstyle-green" size={20} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={onOpenConfigurator}
-                className="flex-1 bg-[#C4EB00] text-black px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all transform hover:scale-105"
-              >
-                COTIZAR AHORA <ShoppingCart size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
-}
