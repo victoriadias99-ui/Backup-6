@@ -7,17 +7,17 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      image: "/Slide-1.png",
+      image: "/slidetest-1.png",
       title: "Slide 1"
     },
     {
       id: 2,
-      image: "/Slide-2.png",
+      image: "/slidetest-2.png",
       title: "Slide 2"
     },
     {
       id: 3,
-      image: "/Slide-3.png",
+      image: "/slidetest-3.png",
       title: "Slide 3"
     }
   ];
