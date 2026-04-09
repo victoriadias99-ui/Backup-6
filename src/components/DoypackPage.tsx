@@ -16,7 +16,7 @@ export default function DoypackPage({ onOpenConfigurator }: { onOpenConfigurator
            <img
            src="/p-plastico.png"
            alt="Bolsas Doypack"
-           className="w-full max-w-[420px] aspect-[4/5] object-contain drop-shadow-2xl"
+           className="w-full max-w-[420px] aspect-[3/4] object-contain drop-shadow-2xl"
            />
           </div>
           <div>
