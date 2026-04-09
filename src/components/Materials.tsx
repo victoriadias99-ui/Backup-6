@@ -23,7 +23,7 @@ export default function Materials() {
       id: "pelicula-transparente",
       name: "BOLSA TRANSPARENTE",
       title: "Bolsa Transparente",
-      image: "/bolsa-transparente.png",
+      image: "/Bolsa-transparente.png",
       description: "Permite que tu producto sea el protagonista. Esta película transparente ofrece una excelente visibilidad del contenido mientras mantiene propiedades de barrera esenciales y es 100% reciclable.",
       features: [
         { icon: <Sun size={18} className="text-gray-400" />, text: "ALTA TRANSPARENCIA" },

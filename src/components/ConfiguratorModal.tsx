@@ -57,7 +57,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
     { name: "Papel de aluminio", image: "/Papel-aluminio.png" },
     { name: "Papel reciclable", image: "/papel-reciclable.png" },
     { name: "Película Reciclable Metalizada", image: "/metalizada.png" },
-    { name: "Bolsa Transparente", image: "/bolsa-transparente.png" }
+    { name: "Bolsa Transparente", image: "/Bolsa-transparente.png" }
   ];
   const acabados = [
     { name: "Acabado soft touch", image: "/soft.png" },
