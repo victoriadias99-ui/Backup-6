@@ -131,16 +131,14 @@ export default function MaterialDetailPage({ onOpenConfigurator }: { onOpenConfi
 
           <div className="flex flex-col lg:flex-row gap-16 items-start mb-24">
             {/* Image Section */}
-            <div className="w-full lg:w-1/2 bg-gray-50 rounded-[3rem] p-12 flex justify-center relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <img 
-                src={material.image} 
-                alt={material.title} 
-                className="relative z-10 h-[400px] md:h-[500px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-700" 
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-10 right-10 w-20 h-20 border-2 border-gray-200 rounded-full flex items-center justify-center text-2xl font-black text-gray-300">
-                {material.symbol}
+            <div className="w-full lg:w-1/2">
+              <div className="w-full aspect-square rounded-3xl overflow-hidden">
+                <img
+                  src={material.image}
+                  alt={material.title}
+                  className="w-full h-full object-cover object-center"
+                  referrerPolicy="no-referrer"
+                />
               </div>
             </div>
 
