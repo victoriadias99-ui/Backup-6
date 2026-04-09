@@ -126,8 +126,9 @@ export default function Materials() {
           </button>
 
           <div className="md:w-1/2 flex justify-center relative animate-in fade-in slide-in-from-left-8 duration-500" key={`img-${activeTab}`}>
-            <div className="absolute inset-0 bg-gray-100 rounded-full transform -translate-x-1/4 scale-125 blur-3xl"></div>
-            <img src={currentMaterial.image} alt={currentMaterial.title} className="relative z-10 drop-shadow-2xl h-auto max-h-[300px] md:max-h-[420px] object-contain" referrerPolicy="no-referrer" />
+            <div className="w-full aspect-square max-w-[260px] rounded-3xl overflow-hidden">
+              <img src={currentMaterial.image} alt={currentMaterial.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
           </div>
           
           <div className="md:w-1/2 max-w-md animate-in fade-in slide-in-from-right-8 duration-500" key={`content-${activeTab}`}>
