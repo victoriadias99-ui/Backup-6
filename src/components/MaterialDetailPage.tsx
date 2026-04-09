@@ -82,7 +82,7 @@ const materialsData: Record<string, any> = {
     symbol: "PP/MET"
   },
   "pelicula-transparente": {
-    title: "Película Reciclable Transparente",
+    title: "Bolsa Transparente",
     image: "/transparente.png",
     description: "Permite que tu producto sea el protagonista. Esta película transparente ofrece una excelente visibilidad del contenido mientras mantiene propiedades de barrera esenciales y es 100% reciclable.",
     fullDescription: "La transparencia es sinónimo de confianza. Nuestra película reciclable transparente permite al consumidor ver la frescura y calidad del producto antes de comprarlo. Fabricada bajo estándares de economía circular, esta película es totalmente compatible con los sistemas de reciclaje actuales.\n\nOfrece una claridad óptica excepcional, similar al cristal, combinada con una resistencia al punzonado y al desgarro que protege el producto durante toda la cadena de suministro.",

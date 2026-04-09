@@ -7,6 +7,32 @@ export default function Materials() {
 
   const materialsData = [
     {
+      id: "papel-reciclable",
+      name: "PAPEL RECICLABLE",
+      title: "Papel Reciclable",
+      image: "/reciclable.png",
+      description: "Una opción ecológica y sostenible. Nuestro papel reciclable está diseñado para ofrecer una barrera adecuada para productos secos, manteniendo un compromiso firme con el medio ambiente y la economía circular.",
+      features: [
+        { icon: <Feather size={18} className="text-gray-400" />, text: "100% RECICLABLE" },
+        { icon: <Sun size={18} className="text-gray-400" />, text: "SOSTENIBLE Y ECOLÓGICO" },
+        { icon: <ShieldCheck size={18} className="text-gray-400" />, text: "IDEAL PARA PRODUCTOS SECOS" }
+      ],
+      symbol: "PAP"
+    },
+    {
+      id: "pelicula-transparente",
+      name: "BOLSA TRANSPARENTE",
+      title: "Bolsa Transparente",
+      image: "/transparente.png",
+      description: "Permite que tu producto sea el protagonista. Esta película transparente ofrece una excelente visibilidad del contenido mientras mantiene propiedades de barrera esenciales y es 100% reciclable.",
+      features: [
+        { icon: <Sun size={18} className="text-gray-400" />, text: "ALTA TRANSPARENCIA" },
+        { icon: <ShieldCheck size={18} className="text-gray-400" />, text: "100% RECICLABLE" },
+        { icon: <Feather size={18} className="text-gray-400" />, text: "EXCELENTE SELLADO" }
+      ],
+      symbol: "PP"
+    },
+    {
       id: "aluminio",
       name: "ALUMINIO",
       title: "Aluminio",
@@ -34,19 +60,6 @@ export default function Materials() {
       symbol: "PAP/AL"
     },
     {
-      id: "papel-reciclable",
-      name: "PAPEL RECICLABLE",
-      title: "Papel Reciclable",
-      image: "/reciclable.png",
-      description: "Una opción ecológica y sostenible. Nuestro papel reciclable está diseñado para ofrecer una barrera adecuada para productos secos, manteniendo un compromiso firme con el medio ambiente y la economía circular.",
-      features: [
-        { icon: <Feather size={18} className="text-gray-400" />, text: "100% RECICLABLE" },
-        { icon: <Sun size={18} className="text-gray-400" />, text: "SOSTENIBLE Y ECOLÓGICO" },
-        { icon: <ShieldCheck size={18} className="text-gray-400" />, text: "IDEAL PARA PRODUCTOS SECOS" }
-      ],
-      symbol: "PAP"
-    },
-    {
       id: "pelicula-metalizada",
       name: "PELÍCULA RECICLABLE METALIZADA",
       title: "Película Reciclable Metalizada",
@@ -58,19 +71,6 @@ export default function Materials() {
         { icon: <Droplet size={18} className="text-gray-400" />, text: "PROTECCIÓN CONTRA HUMEDAD" }
       ],
       symbol: "PP/MET"
-    },
-    {
-      id: "pelicula-transparente",
-      name: "PELÍCULA RECICLABLE TRANSPARENTE",
-      title: "Película Reciclable Transparente",
-      image: "/transparente.png",
-      description: "Permite que tu producto sea el protagonista. Esta película transparente ofrece una excelente visibilidad del contenido mientras mantiene propiedades de barrera esenciales y es 100% reciclable.",
-      features: [
-        { icon: <Sun size={18} className="text-gray-400" />, text: "ALTA TRANSPARENCIA" },
-        { icon: <ShieldCheck size={18} className="text-gray-400" />, text: "100% RECICLABLE" },
-        { icon: <Feather size={18} className="text-gray-400" />, text: "EXCELENTE SELLADO" }
-      ],
-      symbol: "PP"
     }
   ];
 

@@ -96,7 +96,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
                   className="block px-4 py-3 hover:bg-gray-50 transition-colors text-sm font-bold"
                   onClick={() => setIsMaterialsOpen(false)}
                 >
-                  Película Reciclable Transparente
+                  Bolsa Transparente
                 </Link>
               </div>
             )}
@@ -147,7 +147,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
               <Link to="/materiales/papel-aluminio" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Papel de Aluminio</Link>
               <Link to="/materiales/papel-reciclable" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Papel Reciclable</Link>
               <Link to="/materiales/pelicula-metalizada" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Película Metalizada</Link>
-              <Link to="/materiales/pelicula-transparente" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Película Transparente</Link>
+              <Link to="/materiales/pelicula-transparente" className="text-sm font-bold text-black hover:text-[#004FFF] py-1" onClick={() => setIsMobileMenuOpen(false)}>Bolsa Transparente</Link>
             </div>
 
             <Link to="/acerca-de" className="text-sm font-bold text-black hover:text-[#004FFF] uppercase" onClick={() => setIsMobileMenuOpen(false)}>Nosotros</Link>
