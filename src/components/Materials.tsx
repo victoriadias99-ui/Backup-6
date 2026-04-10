@@ -127,7 +127,7 @@ export default function Materials() {
 
           <div className="md:w-1/2 flex justify-center relative animate-in fade-in slide-in-from-left-8 duration-500" key={`img-${activeTab}`}>
             <div className="w-full aspect-square max-w-[420px] rounded-3xl overflow-hidden">
-              <img src={currentMaterial.image} alt={currentMaterial.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={currentMaterial.image} alt={currentMaterial.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
             </div>
           </div>
           

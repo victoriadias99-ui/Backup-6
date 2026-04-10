@@ -74,6 +74,8 @@ export default function Hero() {
                 alt={slide.title}
                 className={`w-full h-full object-cover ${slide.position}`}
                 referrerPolicy="no-referrer"
+                decoding="async"
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
             </div>
           </div>

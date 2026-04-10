@@ -320,7 +320,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                         className={`p-6 border-2 rounded-xl transition-all text-center font-bold text-gray-800 shadow-sm hover:shadow-md ${selectedProduct === p.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green hover:bg-green-50'}`}
                       >
                         <div className="w-full aspect-square rounded-3xl overflow-hidden mb-4">
-                          <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" referrerPolicy="no-referrer" />
+                          <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                         </div>
                         {p.name}
                       </button>
@@ -367,7 +367,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                             className={`p-4 rounded-xl border-2 transition-all text-center ${material === m.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green'}`}
                           >
                             <div className="w-full aspect-square bg-gray-100 rounded-lg mb-3 overflow-hidden">
-                              <img src={m.image} alt={m.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                              <img src={m.image} alt={m.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                             </div>
                             <span className="text-xs font-bold block">{m.name}</span>
                           </button>
@@ -388,7 +388,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                             className={`p-4 rounded-xl border-2 transition-all text-center ${acabado === a.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20' : 'border-gray-100 hover:border-packstyle-green'}`}
                           >
                             <div className="w-full aspect-video bg-gray-100 rounded-lg mb-3 overflow-hidden">
-                              <img src={a.image} alt={a.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                              <img src={a.image} alt={a.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                             </div>
                             <span className="text-xs font-bold block">{a.name}</span>
                           </button>
@@ -412,7 +412,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                               className={`p-4 rounded-xl border-2 transition-all text-center ${zipResellable === z.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20 shadow-lg' : 'border-gray-100 hover:border-packstyle-green'}`}
                             >
                               <div className="w-full aspect-square bg-gray-100 rounded-lg mb-3 overflow-hidden relative">
-                                <img src={z.image} alt={z.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                <img src={z.image} alt={z.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                                 {z.name.includes("Sin") && <div className="absolute inset-0 flex items-center justify-center bg-white/40"><div className="w-16 h-1 bg-red-500 rotate-45"></div></div>}
                               </div>
                               <span className="text-xs font-bold block">{z.name}</span>
@@ -432,7 +432,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                               className={`p-4 rounded-xl border-2 transition-all text-center ${orificio === o.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20 shadow-lg' : 'border-gray-100 hover:border-packstyle-green'}`}
                             >
                               <div className="w-full aspect-square bg-gray-100 rounded-lg mb-3 overflow-hidden relative">
-                                <img src={o.image} alt={o.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                <img src={o.image} alt={o.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                                 {o.name.includes("Sin") && <div className="absolute inset-0 flex items-center justify-center bg-white/40"><div className="w-16 h-1 bg-red-500 rotate-45"></div></div>}
                               </div>
                               <span className="text-xs font-bold block">{o.name}</span>
@@ -452,7 +452,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                               className={`p-4 rounded-xl border-2 transition-all text-center ${valvula === v.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20 shadow-lg' : 'border-gray-100 hover:border-packstyle-green'}`}
                             >
                               <div className="w-full aspect-square bg-gray-100 rounded-lg mb-3 overflow-hidden relative">
-                                <img src={v.image} alt={v.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                <img src={v.image} alt={v.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                                 {v.name.includes("Sin") && <div className="absolute inset-0 flex items-center justify-center bg-white/40"><div className="w-16 h-1 bg-red-500 rotate-45"></div></div>}
                               </div>
                               <span className="text-xs font-bold block">{v.name}</span>
@@ -472,7 +472,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                               className={`p-4 rounded-xl border-2 transition-all text-center ${boquilla === b.name ? 'border-packstyle-green bg-green-50 ring-2 ring-packstyle-green/20 shadow-lg' : 'border-gray-100 hover:border-packstyle-green'}`}
                             >
                               <div className="w-full aspect-square bg-gray-100 rounded-lg mb-3 overflow-hidden relative">
-                                <img src={b.image} alt={b.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                <img src={b.image} alt={b.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                                 {b.name.includes("Sin") && <div className="absolute inset-0 flex items-center justify-center bg-white/40"><div className="w-16 h-1 bg-red-500 rotate-45"></div></div>}
                               </div>
                               <span className="text-xs font-bold block">{b.name}</span>

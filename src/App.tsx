@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -13,15 +13,16 @@ import Markets from './components/Markets';
 import Materials from './components/Materials';
 import Finishes from './components/Finishes';
 import FAQ from './components/FAQ';
-import AboutPage from './components/AboutPage';
 import Footer from './components/Footer';
-import ConfiguratorModal from './components/ConfiguratorModal';
-import DoypackPage from './components/DoypackPage';
-import FlatBagPage from './components/FlatBagPage';
-import MaterialDetailPage from './components/MaterialDetailPage';
-import InfoPage from './components/InfoPage';
-import HowItWorks from './components/HowItWorks';
 import ScrollToTop from './components/ScrollToTop';
+
+const AboutPage = lazy(() => import('./components/AboutPage'));
+const ConfiguratorModal = lazy(() => import('./components/ConfiguratorModal'));
+const DoypackPage = lazy(() => import('./components/DoypackPage'));
+const FlatBagPage = lazy(() => import('./components/FlatBagPage'));
+const MaterialDetailPage = lazy(() => import('./components/MaterialDetailPage'));
+const InfoPage = lazy(() => import('./components/InfoPage'));
+const HowItWorks = lazy(() => import('./components/HowItWorks'));
 
 function HomePage({ onOpenConfigurator }: { onOpenConfigurator: () => void }) {
   return (
@@ -56,50 +57,54 @@ function AppContent({
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900">
       <ScrollToTop />
-      <div>
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage onOpenConfigurator={onOpenConfigurator} />} />
           <Route path="/bolsas-doypack" element={<DoypackPage onOpenConfigurator={onOpenConfigurator} />} />
           <Route path="/bolsas-planas" element={<FlatBagPage onOpenConfigurator={onOpenConfigurator} />} />
-          <Route 
-            path="/servicios" 
+          <Route
+            path="/servicios"
             element={
-              <InfoPage 
-                title="Nuestros Servicios" 
-                description="Ofrecemos servicios integrales de diseño, impresión y fabricación de envases flexibles. Desde la concepción de la idea hasta la entrega final, acompañamos a nuestros clientes en cada paso." 
+              <InfoPage
+                title="Nuestros Servicios"
+                description="Ofrecemos servicios integrales de diseño, impresión y fabricación de envases flexibles. Desde la concepción de la idea hasta la entrega final, acompañamos a nuestros clientes en cada paso."
                 onOpenConfigurator={onOpenConfigurator}
                 imageSeed="services-packaging"
               />
-            } 
+            }
           />
-          <Route 
-            path="/mercados" 
+          <Route
+            path="/mercados"
             element={
-              <InfoPage 
-                title="Mercados" 
-                description="Nuestras soluciones de packaging están presentes en diversos sectores: alimentación, cosmética, farmacia, industria química y más. Adaptamos cada envase a las normativas y necesidades de cada mercado." 
+              <InfoPage
+                title="Mercados"
+                description="Nuestras soluciones de packaging están presentes en diversos sectores: alimentación, cosmética, farmacia, industria química y más. Adaptamos cada envase a las normativas y necesidades de cada mercado."
                 onOpenConfigurator={onOpenConfigurator}
                 imageSeed="market-industry"
               />
-            } 
+            }
           />
-          <Route 
-            path="/acerca-de" 
-            element={<AboutPage onOpenConfigurator={onOpenConfigurator} />} 
+          <Route
+            path="/acerca-de"
+            element={<AboutPage onOpenConfigurator={onOpenConfigurator} />}
           />
-          <Route 
-            path="/como-funciona" 
-            element={<HowItWorks onOpenConfigurator={onOpenConfigurator} />} 
+          <Route
+            path="/como-funciona"
+            element={<HowItWorks onOpenConfigurator={onOpenConfigurator} />}
           />
-          <Route 
-            path="/materiales/:materialId" 
-            element={<MaterialDetailPage onOpenConfigurator={onOpenConfigurator} />} 
+          <Route
+            path="/materiales/:materialId"
+            element={<MaterialDetailPage onOpenConfigurator={onOpenConfigurator} />}
           />
           {/* Catch-all route to prevent blank pages */}
           <Route path="*" element={<HomePage onOpenConfigurator={onOpenConfigurator} />} />
         </Routes>
-      </div>
-    {isConfiguratorOpen && <ConfiguratorModal onClose={() => setIsConfiguratorOpen(false)} />}
+      </Suspense>
+    {isConfiguratorOpen && (
+      <Suspense fallback={null}>
+        <ConfiguratorModal onClose={() => setIsConfiguratorOpen(false)} />
+      </Suspense>
+    )}
   </div>
   );
 }
