@@ -7,17 +7,17 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      image: "/slidetest-1.png",
+      image: "/slideup-1.png",
       title: "Slide 1"
     },
     {
       id: 2,
-      image: "/slidetest-2.png",
+      image: "/slideup-2.png",
       title: "Slide 2"
     },
     {
       id: 3,
-      image: "/slidetest-3.png",
+      image: "/slideup-3.png",
       title: "Slide 3"
     }
   ];
@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 overflow-hidden bg-white">
+    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] overflow-hidden bg-white">
       
       {/* Botón anterior */}
       <button 
@@ -59,18 +59,18 @@ export default function Hero() {
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
-          <div 
+          <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               currentSlide === index ? 'opacity-100 z-20' : 'opacity-0 z-10'
             }`}
           >
             <div className="w-full h-full relative">
-              <img 
-                src={slide.image} 
-                alt={slide.title} 
-                className="w-full h-full object-cover" 
-                referrerPolicy="no-referrer" 
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
