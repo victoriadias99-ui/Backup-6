@@ -9,7 +9,7 @@ export default function Hero() {
       id: 1,
       image: "/slideup-1.png",
       title: "Slide 1",
-      position: "object-top"
+      position: "object-center"
     },
     {
       id: 2,
