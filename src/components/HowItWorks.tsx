@@ -20,7 +20,7 @@ export default function HowItWorks({ onOpenConfigurator }: { onOpenConfigurator:
     },
     {
       number: "03",
-      title: "Recibe en 4 días",
+      title: "Recibe tu producto",
       desc: "Producción rápida y entrega directa para que no detengas tu negocio."
     }
   ];
