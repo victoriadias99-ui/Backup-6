@@ -58,10 +58,6 @@ export default function AboutPage({ onOpenConfigurator }: { onOpenConfigurator: 
           
           {/* Quiénes Somos Section */}
           <div className="mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C4EB00]/20 text-black text-xs font-bold mb-6 tracking-wider uppercase">
-              <Zap size={14} className="text-[#004FFF]" />
-              La primera fábrica digital de bolsas
-            </div>
 
             <div className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center">
               {/* Imagen izquierda */}
