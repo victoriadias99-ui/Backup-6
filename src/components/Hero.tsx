@@ -41,7 +41,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 overflow-hidden bg-white">
+    <section className="relative h-[90vh] md:h-[85vh] min-h-[550px] md:min-h-[550px] -mt-20 overflow-hidden bg-white">
       
       {/* Botón anterior */}
       <button 
