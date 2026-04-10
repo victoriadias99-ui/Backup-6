@@ -8,17 +8,20 @@ export default function Hero() {
     {
       id: 1,
       image: "/slideup-1.png",
-      title: "Slide 1"
+      title: "Slide 1",
+      position: "object-top"
     },
     {
       id: 2,
       image: "/slideup-2.png",
-      title: "Slide 2"
+      title: "Slide 2",
+      position: "object-center"
     },
     {
       id: 3,
       image: "/slideup-3.png",
-      title: "Slide 3"
+      title: "Slide 3",
+      position: "object-center"
     }
   ];
 
@@ -69,7 +72,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${slide.position}`}
                 referrerPolicy="no-referrer"
               />
             </div>
