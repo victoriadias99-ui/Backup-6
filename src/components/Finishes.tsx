@@ -124,7 +124,7 @@ export default function Finishes() {
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover/card:text-[#7F35F1] transition-colors tracking-tight leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-base text-gray-500 leading-relaxed">
+                    <p className="text-sm text-gray-500 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
