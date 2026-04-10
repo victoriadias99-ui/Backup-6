@@ -102,7 +102,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
             )}
           </div>
 
-          <Link to="/acerca-de" className="flex items-center gap-1 hover:text-[#004FFF] uppercase transition-colors">Nosotros <ChevronDown size={14} /></Link>
+          <Link to="/acerca-de" className="hover:text-[#004FFF] uppercase transition-colors">Nosotros</Link>
         </nav>
 
         {/* Right Actions Section */}
