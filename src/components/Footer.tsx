@@ -2,6 +2,8 @@ import { useState, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Box, Check } from 'lucide-react';
 
+const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || '';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState('');
@@ -23,15 +25,24 @@ export default function Footer() {
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (email) {
-      // Simulate API call
-      console.log('Newsletter subscription:', email);
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 5000);
+    if (!email) return;
+    if (SCRIPT_URL) {
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tipo: 'newsletter', email }),
+        });
+      } catch (err) {
+        console.error('[Forprini] Error al enviar newsletter:', err);
+      }
     }
+    setSubscribed(true);
+    setEmail('');
+    setTimeout(() => setSubscribed(false), 5000);
   };
 
   return (
