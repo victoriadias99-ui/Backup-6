@@ -62,7 +62,7 @@ export default function Footer() {
               <li><a href="/" onClick={handleScrollTop} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Inicio</a></li>
               <li><a href="/" onClick={handleScrollTo('productos')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Productos</a></li>
               <li><Link to="/acerca-de" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
-              <li><Link to="/como-funciona" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Cómo funciona</Link></li>
+              <li><a href="/" onClick={handleScrollTo('materiales')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Materiales</a></li>
             </ul>
           </div>
 
