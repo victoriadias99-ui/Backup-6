@@ -61,8 +61,8 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><a href="/" onClick={handleScrollTop} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Inicio</a></li>
               <li><a href="/" onClick={handleScrollTo('productos')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Productos</a></li>
-              <li><Link to="/acerca-de" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
               <li><a href="/" onClick={handleScrollTo('materiales')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Materiales</a></li>
+              <li><Link to="/acerca-de" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
             </ul>
           </div>
 
