@@ -195,7 +195,7 @@ export default function ConfiguratorModal({ onClose }: { onClose: () => void }) 
                         type="tel"
                         required
                         value={userData.telefono}
-                        onChange={e => setUserData({...userData, telefono: e.target.value})}
+                        onChange={e => setUserData({...userData, telefono: e.target.value.replace(/[^0-9+\s()-]/g, '')})}
                         className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-packstyle-green focus:border-packstyle-green outline-none transition-all bg-white"
                         placeholder="+54 000 000 000"
                       />
