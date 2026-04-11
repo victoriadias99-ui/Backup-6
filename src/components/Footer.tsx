@@ -1,11 +1,27 @@
 import { useState, FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Box, Check } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const navigate = useNavigate();
+
+  const handleScrollTo = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleScrollTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -43,9 +59,9 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Enlaces útiles</h4>
             <ul className="space-y-4">
-              <li><Link to="/" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Inicio</Link></li>
-              <li><Link to="/#productos" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Productos</Link></li>
-              <li><Link to="/nosotros" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
+              <li><a href="/" onClick={handleScrollTop} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Inicio</a></li>
+              <li><a href="/" onClick={handleScrollTo('productos')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Productos</a></li>
+              <li><Link to="/acerca-de" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
               <li><Link to="/como-funciona" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Cómo funciona</Link></li>
             </ul>
           </div>
