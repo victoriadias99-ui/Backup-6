@@ -72,8 +72,6 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link to="/bolsas-doypack" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Doypack</Link></li>
               <li><Link to="/bolsas-planas" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Planas</Link></li>
-              <li><Link to="/envases-cosmeticos" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Envases Cosméticos</Link></li>
-              <li><Link to="/contacto" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Contacto</Link></li>
             </ul>
           </div>
 
