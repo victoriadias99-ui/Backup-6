@@ -108,7 +108,7 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
         {/* Right Actions Section */}
         <div className="flex items-center justify-end gap-2 md:gap-4">
           <div className="hidden xl:flex flex-col items-end text-[10px] text-black/70 font-bold mr-2">
-            <div className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} className="text-[#004FFF]" /> soporte@forprini.com</div>
+            <div className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} className="text-[#004FFF]" /> forprini.empaques@gmail.com</div>
           </div>
           
           <button 
