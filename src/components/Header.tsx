@@ -8,8 +8,8 @@ export default function Header({ onOpenConfigurator }: { onOpenConfigurator?: ()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-transparent sticky top-0 z-50 pl-4 pr-0 pt-2">
-      <div className="w-full h-12 grid grid-cols-2 lg:grid-cols-3 items-center bg-[#FDEDD4] rounded-l-2xl shadow-sm border border-gray-100 border-r-0 px-4 md:px-6">
+    <header className="w-full bg-transparent sticky top-0 z-50 pl-4 pr-0 pt-4">
+      <div className="w-full h-16 grid grid-cols-2 lg:grid-cols-3 items-center bg-[#FDEDD4] rounded-l-2xl shadow-sm border border-gray-100 border-r-0 px-4 md:px-6">
         {/* Logo Section */}
         <div className="flex items-center justify-start">
           <Link to="/" className="flex items-center">
