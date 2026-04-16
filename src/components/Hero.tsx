@@ -7,18 +7,24 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
+      image: "/banner-1.png",
+      title: "Banner 1",
+      position: "object-center"
+    },
+    {
+      id: 2,
       image: "/banner-2.png",
       title: "Banner 2",
       position: "object-center"
     },
     {
-      id: 2,
+      id: 3,
       image: "/banner-3.png",
       title: "Banner 3",
       position: "object-center"
     },
     {
-      id: 3,
+      id: 4,
       image: "/banner-4.png",
       title: "Banner 4",
       position: "object-center"
