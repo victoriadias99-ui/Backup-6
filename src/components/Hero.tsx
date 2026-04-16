@@ -79,6 +79,7 @@ export default function Hero() {
                 src={slide.image}
                 alt={slide.title}
                 className={`w-full h-full object-cover ${slide.position}`}
+                style={{ transform: 'scale(1.18)', transformOrigin: 'top center' }}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
