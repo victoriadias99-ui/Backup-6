@@ -9,25 +9,25 @@ export default function Hero() {
       id: 1,
       image: "/banner-1.png",
       title: "Banner 1",
-      position: "object-center"
+      bg: "#d895b2"
     },
     {
       id: 2,
       image: "/banner-2.png",
       title: "Banner 2",
-      position: "object-center"
+      bg: "#e1d6a3"
     },
     {
       id: 3,
       image: "/banner-3.png",
       title: "Banner 3",
-      position: "object-center"
+      bg: "#7d3cf1"
     },
     {
       id: 4,
       image: "/banner-4.png",
       title: "Banner 4",
-      position: "object-center"
+      bg: "#eeca8e"
     }
   ];
 
@@ -73,17 +73,16 @@ export default function Hero() {
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               currentSlide === index ? 'opacity-100 z-20' : 'opacity-0 z-10'
             }`}
+            style={{ backgroundColor: slide.bg }}
           >
-            <div className="w-full h-full relative">
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className={`w-full h-full object-cover ${slide.position}`}
-referrerPolicy="no-referrer"
-                decoding="async"
-                loading={index === 0 ? 'eager' : 'lazy'}
-              />
-            </div>
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-contain object-top"
+              referrerPolicy="no-referrer"
+              decoding="async"
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
           </div>
         ))}
       </div>
