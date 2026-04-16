@@ -78,8 +78,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className={`w-full object-cover ${slide.position} absolute inset-x-0`}
-                style={{ top: '20px', height: 'calc(100% + 20px)' }}
+                className={`w-full h-full object-cover ${slide.position}`}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
