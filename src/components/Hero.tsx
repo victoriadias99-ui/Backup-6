@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
       id: 1,
@@ -33,6 +34,7 @@ export default function Hero() {
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
+
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
@@ -45,10 +47,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative -mt-20 overflow-hidden bg-white">
-
+    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 overflow-hidden bg-white">
+      
       {/* Botón anterior */}
-      <button
+      <button 
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-800 hover:text-black hidden md:block z-50 bg-white/30 hover:bg-white/50 p-2 rounded-full transition-colors"
       >
@@ -56,7 +58,7 @@ export default function Hero() {
       </button>
 
       {/* Botón siguiente */}
-      <button
+      <button 
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-800 hover:text-black hidden md:block z-50 bg-white/30 hover:bg-white/50 p-2 rounded-full transition-colors"
       >
@@ -64,7 +66,7 @@ export default function Hero() {
       </button>
 
       {/* Slides */}
-      <div className="relative w-full h-[52vw] min-h-[180px] md:h-[70vh] md:min-h-[450px]">
+      <div className="relative w-full h-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -76,7 +78,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className={`w-full h-full object-contain md:object-cover ${slide.position}`}
+                className={`w-full h-full object-cover ${slide.position}`}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -99,6 +101,7 @@ export default function Hero() {
           />
         ))}
       </div>
+
     </section>
   );
 }
