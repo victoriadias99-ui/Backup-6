@@ -91,7 +91,6 @@ export default function Hero() {
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-full object-fill hidden md:block"
-                style={{ transform: 'scale(0.9)' }}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
