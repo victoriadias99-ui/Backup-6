@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ height: '500px' }}>
+    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ aspectRatio: '1500/600' }}>
 
       {/* Botón anterior */}
       <button
@@ -90,7 +90,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="absolute left-1/2 -translate-x-1/2 h-full w-auto hidden md:block"
+                className="w-full h-full object-fill hidden md:block"
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
