@@ -90,7 +90,8 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-fill hidden md:block"
+                className="w-full h-full object-cover hidden md:block"
+                style={{ transform: 'scale(0.9)' }}  {/* 1 = sin zoom, 0.9 = 10% menos zoom */}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
