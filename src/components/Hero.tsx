@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ aspectRatio: '1500/550' }}>
+    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ height: '500px' }}>
 
       {/* Botón anterior */}
       <button
