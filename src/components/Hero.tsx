@@ -81,7 +81,7 @@ export default function Hero() {
               <img
                 src={slide.imageMobile}
                 alt={slide.title}
-                className={`w-full h-full object-fill block md:hidden`}
+                className="w-full h-full object-fill block md:hidden"
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -90,7 +90,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className={`w-full h-full object-cover ${slide.position} block md:hidden`}
+                className="absolute left-1/2 -translate-x-1/2 h-full w-auto hidden md:block"
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
