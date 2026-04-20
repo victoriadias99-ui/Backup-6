@@ -90,7 +90,7 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className={`w-full h-full object-contain hidden md:block`}
+                className={`w-full h-full object-cover ${slide.position} block md:hidden`}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
