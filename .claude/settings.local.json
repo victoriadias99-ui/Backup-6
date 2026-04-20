@@ -11,7 +11,22 @@
       "Bash(ls .env*)",
       "Bash(git commit:*)",
       "Bash(git pull:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(npm run:*)",
+      "Bash(sort -k6,7)",
+      "Bash(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install Pillow --quiet)",
+      "Bash(python)",
+      "Bash(find /c/Users/vicki/Backup-6 -maxdepth 1 -type d -exec du -sh {} \\\\;)",
+      "Bash(grep -h \"from 'lucide-react'\" /c/Users/vicki/Backup-6/src/components/*.tsx)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(pip show *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(python3 -m pip install pillow)",
+      "Bash(python -m pip install pillow)"
     ]
   }
 }

@@ -28,6 +28,7 @@ export default function Footer() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    console.log('[Newsletter] SCRIPT_URL:', SCRIPT_URL);
     if (SCRIPT_URL) {
       try {
         await fetch(SCRIPT_URL, {
