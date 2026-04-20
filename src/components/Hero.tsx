@@ -91,7 +91,7 @@ export default function Hero() {
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-full object-cover hidden md:block"
-                style={{ transform: 'scale(0.85)' }}  {/* 1 = sin zoom, 0.9 = 10% menos zoom */}
+                style={{ transform: 'scale(0.85)' }}
                 referrerPolicy="no-referrer"
                 decoding="async"
                 loading={index === 0 ? 'eager' : 'lazy'}
