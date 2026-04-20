@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 overflow-hidden bg-white">
+    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ aspectRatio: '1500/500' }}>
 
       {/* Botón anterior */}
       <button
@@ -164,7 +164,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[80vh] md:h-[70vh] min-h-[500px] md:min-h-[450px] -mt-20 pt-20 overflow-hidden bg-white">
+    <section className="relative w-full -mt-20 overflow-hidden bg-white" style={{ aspectRatio: '1500/500' }}>
       
       {/* Botón anterior */}
       <button 
