@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full md:-mt-20 overflow-hidden bg-white aspect-[376/161] md:aspect-[1500/550]">
+    <section className="relative w-full md:-mt-20 overflow-hidden bg-white aspect-[376/161] md:aspect-[1500/500]">
 
       {/* Botón anterior */}
       <button
