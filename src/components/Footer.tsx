@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Box, Check } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Check } from 'lucide-react';
 
 const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || '';
 
@@ -47,7 +47,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#7F35F1] text-white pt-16 pb-8 relative border-t border-white/5">
+    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10">
       <div className="max-w-7xl mx-auto px-4">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
@@ -61,52 +61,52 @@ export default function Footer() {
   />
 </Link>
             <div className="flex gap-4">
-              <a href="#" className="text-white/40 hover:text-white transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-white/40 hover:text-white transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-white/40 hover:text-white transition-colors"><Linkedin size={20} /></a>
+              <a href="#" className="text-black hover:text-black/70 transition-colors"><Facebook size={20} /></a>
+              <a href="#" className="text-black hover:text-black/70 transition-colors"><Instagram size={20} /></a>
+              <a href="#" className="text-black hover:text-black/70 transition-colors"><Linkedin size={20} /></a>
             </div>
           </div>
 
           {/* Useful Links Column 1 */}
           <div className="md:col-span-2">
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Enlaces útiles</h4>
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-black">Enlaces útiles</h4>
             <ul className="space-y-4">
-              <li><a href="/" onClick={handleScrollTop} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Inicio</a></li>
-              <li><a href="/" onClick={handleScrollTo('productos')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Productos</a></li>
-              <li><a href="/" onClick={handleScrollTo('materiales')} className="text-sm font-medium hover:text-[#C4EB00] transition-colors cursor-pointer">Materiales</a></li>
-              <li><Link to="/acerca-de" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Nosotros</Link></li>
+              <li><a href="/" onClick={handleScrollTop} className="text-sm font-semibold hover:text-[#A9D600] transition-colors cursor-pointer">Inicio</a></li>
+              <li><a href="/" onClick={handleScrollTo('productos')} className="text-sm font-semibold hover:text-[#A9D600] transition-colors cursor-pointer">Productos</a></li>
+              <li><a href="/" onClick={handleScrollTo('materiales')} className="text-sm font-semibold hover:text-[#A9D600] transition-colors cursor-pointer">Materiales</a></li>
+              <li><Link to="/acerca-de" className="text-sm font-semibold hover:text-[#A9D600] transition-colors">Nosotros</Link></li>
             </ul>
           </div>
 
           {/* Useful Links Column 2 */}
           <div className="md:col-span-2">
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Productos</h4>
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-black">Productos</h4>
             <ul className="space-y-4">
-              <li><Link to="/bolsas-doypack" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Doypack</Link></li>
-              <li><Link to="/bolsas-planas" className="text-sm font-medium hover:text-[#C4EB00] transition-colors">Bolsas Planas</Link></li>
+              <li><Link to="/bolsas-doypack" className="text-sm font-semibold hover:text-[#A9D600] transition-colors">Bolsas Doypack</Link></li>
+              <li><Link to="/bolsas-planas" className="text-sm font-semibold hover:text-[#A9D600] transition-colors">Bolsas Planas</Link></li>
             </ul>
           </div>
 
           {/* Newsletter Section */}
-          <div className="md:col-span-5">
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white/40">Suscríbete a nuestro boletín</h4>
+          <div className="md:col-span-3">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-black">Suscríbete a nuestro boletín</h4>
             <div className="relative max-w-md">
               {subscribed ? (
-                <div className="flex items-center gap-3 bg-white/10 rounded-full p-3 px-6 border border-white/10 animate-in fade-in zoom-in duration-300">
+                <div className="flex items-center gap-3 bg-black rounded-full p-3 px-6 border border-black animate-in fade-in zoom-in duration-300">
                   <div className="w-8 h-8 bg-[#C4EB00] rounded-full flex items-center justify-center text-black">
                     <Check size={18} />
                   </div>
-                  <span className="text-sm font-bold">¡Gracias por suscribirte!</span>
+                  <span className="text-sm font-bold text-white">¡Gracias por suscribirte!</span>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex bg-white/10 rounded-full p-1.5 pl-6 items-center border border-white/10 focus-within:border-white/20 transition-all">
+                <form onSubmit={handleSubmit} className="flex bg-black rounded-full p-1.5 pl-6 items-center border border-black transition-all">
                   <input 
                     type="email" 
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Tu dirección de correo" 
-                    className="bg-transparent border-none outline-none flex-grow text-sm placeholder:text-white/30 py-2" 
+                    className="bg-transparent border-none outline-none flex-grow text-sm text-white placeholder:text-white/60 py-2" 
                   />
                   <button type="submit" className="bg-[#C4EB00] text-black px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-[#C4EB00]/20">
                     Enviar
@@ -114,18 +114,27 @@ export default function Footer() {
                 </form>
               )}
             </div>
-            <p className="mt-4 text-[10px] text-white/40 font-medium max-w-xs">
+            <p className="mt-4 text-[10px] text-black/70 font-medium max-w-xs">
               Al suscribirte, aceptas nuestra Política de Privacidad y recibir comunicaciones de marketing.
             </p>
+          </div>
+
+          {/* Decorative Image */}
+          <div className="md:col-span-2 flex md:justify-end justify-center">
+            <img
+              src="/landing.png"
+              alt="Ilustración Forprini"
+              className="w-40 md:w-48 h-auto object-contain"
+            />
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs font-bold text-white/40 uppercase tracking-widest">
+        <div className="pt-8 border-t border-black/20 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs font-bold text-black uppercase tracking-widest">
             Copyright © {currentYear} Forprini Packaging
           </p>
-          <p className="text-xs font-bold text-white/40 uppercase tracking-widest">
+          <p className="text-xs font-bold text-black uppercase tracking-widest">
             Todos los derechos reservados.
           </p>
         </div>
