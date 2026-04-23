@@ -47,20 +47,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10 overflow-hidden">
+    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10">
+      {/* Decorative Image - Absolute positioned at the right edge of the viewport */}
+      <img
+        src="/landing.png"
+        alt="Ilustración Forprini"
+        className="hidden md:block absolute h-auto object-contain pointer-events-none select-none z-0"
+        style={{
+          width: 'clamp(260px, 26vw, 420px)',
+          right: '0px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 relative">
-        {/* Decorative Image - Absolute positioned on the right */}
-        <img
-          src="/landing.png"
-          alt="Ilustración Forprini"
-          className="hidden md:block absolute h-auto object-contain pointer-events-none select-none z-0"
-          style={{
-            width: 'clamp(260px, 26vw, 420px)',
-            right: '-80px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-          }}
-        />
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-16 relative z-10">
           {/* Logo & Brand */}
