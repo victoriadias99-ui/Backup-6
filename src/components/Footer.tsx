@@ -47,10 +47,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 relative">
+        {/* Decorative Image - Absolute positioned on the right */}
+        <img
+          src="/landing.png"
+          alt="Ilustración Forprini"
+          className="hidden md:block absolute h-auto object-contain pointer-events-none select-none z-0"
+          style={{
+            width: 'clamp(260px, 26vw, 420px)',
+            right: '-80px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+          }}
+        />
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-16 relative z-10">
           {/* Logo & Brand */}
           <div className="md:col-span-3">
             <Link to="/" className="flex items-center mb-6 group">
@@ -88,27 +100,27 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-5">
             <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-black">Suscríbete a nuestro boletín</h4>
-            <div className="relative max-w-md">
+            <div className="relative max-w-[380px]">
               {subscribed ? (
-                <div className="flex items-center gap-3 bg-black rounded-full p-3 px-6 border border-black animate-in fade-in zoom-in duration-300">
+                <div className="flex items-center gap-3 bg-black rounded-full px-6 border border-black animate-in fade-in zoom-in duration-300 h-[56px]">
                   <div className="w-8 h-8 bg-[#C4EB00] rounded-full flex items-center justify-center text-black">
                     <Check size={18} />
                   </div>
                   <span className="text-sm font-bold text-white">¡Gracias por suscribirte!</span>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex bg-black rounded-full p-1.5 pl-6 items-center border border-black transition-all">
+                <form onSubmit={handleSubmit} className="flex bg-black rounded-full pl-5 pr-1.5 items-center border border-black transition-all h-[56px]">
                   <input 
                     type="email" 
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Tu dirección de correo" 
-                    className="bg-transparent border-none outline-none flex-grow text-sm text-white placeholder:text-white/60 py-2" 
+                    className="bg-transparent border-none outline-none flex-grow min-w-0 text-sm text-white placeholder:text-white/60 h-full" 
                   />
-                  <button type="submit" className="bg-[#C4EB00] text-black px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-[#C4EB00]/20">
+                  <button type="submit" className="bg-[#C4EB00] text-black px-7 h-[44px] rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-[#C4EB00]/20 flex items-center justify-center whitespace-nowrap shrink-0">
                     Enviar
                   </button>
                 </form>
@@ -118,15 +130,15 @@ export default function Footer() {
               Al suscribirte, aceptas nuestra Política de Privacidad y recibir comunicaciones de marketing.
             </p>
           </div>
+        </div>
 
-          {/* Decorative Image */}
-          <div className="md:col-span-2 flex md:justify-end justify-center">
-            <img
-              src="/landing.png"
-              alt="Ilustración Forprini"
-              className="w-40 md:w-48 h-auto object-contain"
-            />
-          </div>
+        {/* Decorative Image - mobile only (shown below on small screens) */}
+        <div className="md:hidden flex justify-center mb-8">
+          <img
+            src="/landing.png"
+            alt="Ilustración Forprini"
+            className="w-64 h-auto object-contain"
+          />
         </div>
 
         {/* Bottom Section */}
