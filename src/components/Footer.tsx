@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Check } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Check } from 'lucide-react';
 
 const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || '';
 
@@ -73,9 +73,42 @@ export default function Footer() {
   />
 </Link>
             <div className="flex gap-4">
-              <a href="#" className="text-black hover:text-black/70 transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-black hover:text-black/70 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-black hover:text-black/70 transition-colors"><Linkedin size={20} /></a>
+              <a
+                href="https://www.facebook.com/people/Forprini/61573990456042/?sk=mentions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-black hover:text-black/70 transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/forprini.empaques/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-black hover:text-black/70 transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/forprini/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-black hover:text-black/70 transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.youtube.com/@ForpriniEmpaques"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-black hover:text-black/70 transition-colors"
+              >
+                <Youtube size={20} />
+              </a>
             </div>
           </div>
 
