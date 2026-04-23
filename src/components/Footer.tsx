@@ -47,15 +47,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10">
+    <footer className="bg-[#FFF4E7] text-black pt-16 pb-8 relative border-t border-black/10 overflow-x-hidden">
       {/* Decorative Image - Absolute positioned at the right edge of the viewport */}
       <img
         src="/landing.png"
         alt="Ilustración Forprini"
         className="hidden md:block absolute h-auto object-contain pointer-events-none select-none z-0"
         style={{
-          width: 'clamp(260px, 26vw, 420px)',
-          right: '0px',
+          width: 'clamp(220px, 21vw, 340px)',
+          right: '-12px',
           top: '50%',
           transform: 'translateY(-50%)',
         }}
