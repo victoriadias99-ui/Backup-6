@@ -54,7 +54,7 @@ export default function Footer() {
         alt="Ilustración Forprini"
         className="hidden md:block absolute h-auto object-contain pointer-events-none select-none z-0"
         style={{
-          width: 'clamp(220px, 21vw, 340px)',
+          width: 'clamp(180px, 17vw, 280px)',
           right: '-12px',
           top: '50%',
           transform: 'translateY(-50%)',
